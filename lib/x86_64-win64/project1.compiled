@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\fpc\bin\x86_64-win64\fpc.exe" Date="1447145489"/>
+  <Params Value=" -MObjFPC -Scghi -Os4 -WG -l -vewnhibq -FiD:\projects\Real-ESRGAN_GUI\lib\x86_64-win64 -FuC:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\lazarus\lcl\units\x86_64-win64\win32 -FuC:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\lazarus\lcl\units\x86_64-win64 -FuC:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\lazarus\components\freetype\lib\x86_64-win64 -FuC:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\lazarus\packager\units\x86_64-win64 -FuD:\projects\Real-ESRGAN_GUI\ -FUD:\projects\Real-ESRGAN_GUI\lib\x86_64-win64\ -FED:\projects\Real-ESRGAN_GUI\ -oD:\projects\Real-ESRGAN_GUI\project1.exe -dLCL -dLCLwin32 project1.lpr"/>
+</CONFIG>

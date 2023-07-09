@@ -1,0 +1,731 @@
+object Form2: TForm2
+  Left = 370
+  Height = 498
+  Top = 250
+  Width = 880
+  Caption = 'Form2'
+  ClientHeight = 498
+  ClientWidth = 880
+  DesignTimePPI = 120
+  object Memoabout: TMemo
+    Left = 312
+    Height = 424
+    Top = 16
+    Width = 552
+    Lines.Strings = (
+      '作者：PerfBleu'
+      'https://github.com/PerfBleu'
+      '项目地址: '
+      '----本软件使用Lazarus构建----'
+      'Lazarus & FPC Project : https://www.freepascal.org/'
+      '----本软件使用的开源项目----'
+      'UnTerminal 1.0 : https://github.com/t-edson/UnTerminal'
+      '----软件内图标来自于----'
+      'colibre : https://github.com/rizmut/libreoffice-style-colibre'
+      '----核心二进制文件----'
+      'Real-ESRGAN : https://github.com/xinntao/Real-ESRGAN'
+      '----协议 License----'
+      '本软件使用AGPLv3协议'
+      ''
+      'GNU AFFERO GENERAL PUBLIC LICENSE'
+      ''
+      'Version 3, 19 November 2007'
+      ''
+      'Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>'
+      'Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.'
+      'Preamble'
+      ''
+      'The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software.'
+      ''
+      'The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users.'
+      ''
+      'When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things.'
+      ''
+      'Developers that use our General Public Licenses protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License which gives you legal permission to copy, distribute and/or modify the software.'
+      ''
+      'A secondary benefit of defending all users'' freedom is that improvements made in alternate versions of the program, if they receive widespread use, become available for other developers to incorporate. Many developers of free software are heartened and encouraged by the resulting cooperation. However, in the case of software used on network servers, this result may fail to come about. The GNU General Public License permits making a modified version and letting the public access it on a server without ever releasing its source code to the public.'
+      ''
+      'The GNU Affero General Public License is designed specifically to ensure that, in such cases, the modified source code becomes available to the community. It requires the operator of a network server to provide the source code of the modified version running there to the users of that server. Therefore, public use of a modified version, on a publicly accessible server, gives the public access to the source code of the modified version.'
+      ''
+      'An older license, called the Affero General Public License and published by Affero, was designed to accomplish similar goals. This is a different license, not a version of the Affero GPL, but Affero has released a new version of the Affero GPL which permits relicensing under this license.'
+      ''
+      'The precise terms and conditions for copying, distribution and modification follow.'
+      'TERMS AND CONDITIONS'
+      '0. Definitions.'
+      ''
+      '"This License" refers to version 3 of the GNU Affero General Public License.'
+      ''
+      '"Copyright" also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.'
+      ''
+      '"The Program" refers to any copyrightable work licensed under this License. Each licensee is addressed as "you". "Licensees" and "recipients" may be individuals or organizations.'
+      ''
+      'To "modify" a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a "modified version" of the earlier work or a work "based on" the earlier work.'
+      ''
+      'A "covered work" means either the unmodified Program or a work based on the Program.'
+      ''
+      'To "propagate" a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.'
+      ''
+      'To "convey" a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.'
+      ''
+      'An interactive user interface displays "Appropriate Legal Notices" to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.'
+      '1. Source Code.'
+      ''
+      'The "source code" for a work means the preferred form of the work for making modifications to it. "Object code" means any non-source form of a work.'
+      ''
+      'A "Standard Interface" means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.'
+      ''
+      'The "System Libraries" of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A "Major Component", in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.'
+      ''
+      'The "Corresponding Source" for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work''s System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.'
+      ''
+      'The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.'
+      ''
+      'The Corresponding Source for a work in source code form is that same work.'
+      '2. Basic Permissions.'
+      ''
+      'All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.'
+      ''
+      'You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.'
+      ''
+      'Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary.'
+      '3. Protecting Users'' Legal Rights From Anti-Circumvention Law.'
+      ''
+      'No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.'
+      ''
+      'When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work''s users, your or third parties'' legal rights to forbid circumvention of technological measures.'
+      '4. Conveying Verbatim Copies.'
+      ''
+      'You may convey verbatim copies of the Program''s source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.'
+      ''
+      'You may charge any price or no price for each copy that you convey, and you may offer support or warranty protection for a fee.'
+      '5. Conveying Modified Source Versions.'
+      ''
+      'You may convey a work based on the Program, or the modifications to produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:'
+      ''
+      '    a) The work must carry prominent notices stating that you modified it, and giving a relevant date.'
+      '    b) The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to "keep intact all notices".'
+      '    c) You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.'
+      '    d) If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.'
+      ''
+      'A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an "aggregate" if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation''s users beyond what the individual works permit. Inclusion of a covered work in an aggregate does not cause this License to apply to the other parts of the aggregate.'
+      '6. Conveying Non-Source Forms.'
+      ''
+      'You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:'
+      ''
+      '    a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.'
+      '    b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.'
+      '    c) Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.'
+      '    d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.'
+      '    e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.'
+      ''
+      'A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.'
+      ''
+      'A "User Product" is either (1) a "consumer product", which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, "normally used" refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.'
+      ''
+      '"Installation Information" for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.'
+      ''
+      'If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).'
+      ''
+      'The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.'
+      ''
+      'Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.'
+      '7. Additional Terms.'
+      ''
+      '"Additional permissions" are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.'
+      ''
+      'When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.'
+      ''
+      'Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:'
+      ''
+      '    a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or'
+      '    b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or'
+      '    c) Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or'
+      '    d) Limiting the use for publicity purposes of names of licensors or authors of the material; or'
+      '    e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or'
+      '    f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.'
+      ''
+      'All other non-permissive additional terms are considered "further restrictions" within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.'
+      ''
+      'If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.'
+      ''
+      'Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.'
+      '8. Termination.'
+      ''
+      'You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your rights under this License (including any patent licenses granted under the third paragraph of section 11).'
+      ''
+      'However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.'
+      ''
+      'Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.'
+      ''
+      'Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.'
+      '9. Acceptance Not Required for Having Copies.'
+      ''
+      'You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.'
+      '10. Automatic Licensing of Downstream Recipients.'
+      ''
+      'Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.'
+      ''
+      'An "entity transaction" is a transaction transferring control of an organization, or substantially all assets of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party''s predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.'
+      ''
+      'You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.'
+      '11. Patents.'
+      ''
+      'A "contributor" is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor''s "contributor version".'
+      ''
+      'A contributor''s "essential patent claims" are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, "control" includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.'
+      ''
+      'Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor''s essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.'
+      ''
+      'In the following three paragraphs, a "patent license" is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To "grant" such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.'
+      ''
+      'If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. "Knowingly relying" means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient''s use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.'
+      ''
+      'If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.'
+      ''
+      'A patent license is "discriminatory" if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.'
+      ''
+      'Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.'
+      '12. No Surrender of Others'' Freedom.'
+      ''
+      'If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.'
+      '13. Remote Network Interaction; Use with the GNU General Public License.'
+      ''
+      'Notwithstanding any other provision of this License, if you modify the Program, your modified version must prominently offer all users interacting with it remotely through a computer network (if your version supports such interaction) an opportunity to receive the Corresponding Source of your version by providing access to the Corresponding Source from a network server at no charge, through some standard or customary means of facilitating copying of software. This Corresponding Source shall include the Corresponding Source for any work covered by version 3 of the GNU General Public License that is incorporated pursuant to the following paragraph.'
+      ''
+      'Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the work with which it is combined will remain governed by version 3 of the GNU General Public License.'
+      '14. Revised Versions of this License.'
+      ''
+      'The Free Software Foundation may publish revised and/or new versions of the GNU Affero General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.'
+      ''
+      'Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU Affero General Public License "or any later version" applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU Affero General Public License, you may choose any version ever published by the Free Software Foundation.'
+      ''
+      'If the Program specifies that a proxy can decide which future versions of the GNU Affero General Public License can be used, that proxy''s public statement of acceptance of a version permanently authorizes you to choose that version for the Program.'
+      ''
+      'Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.'
+      '15. Disclaimer of Warranty.'
+      ''
+      'THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.'
+      '16. Limitation of Liability.'
+      ''
+      'IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.'
+      '17. Interpretation of Sections 15 and 16.'
+      ''
+      'If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.'
+      ''
+      'END OF TERMS AND CONDITIONS'
+      'How to Apply These Terms to Your New Programs'
+      ''
+      'If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.'
+      ''
+      'To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively state the exclusion of warranty; and each file should have at least the "copyright" line and a pointer to where the full notice is found.'
+      ''
+      '    <one line to give the program''s name and a brief idea of what it does.>'
+      '    Copyright (C) <year>  <name of author>'
+      ''
+      '    This program is free software: you can redistribute it and/or modify'
+      '    it under the terms of the GNU Affero General Public License as'
+      '    published by the Free Software Foundation, either version 3 of the'
+      '    License, or (at your option) any later version.'
+      ''
+      '    This program is distributed in the hope that it will be useful,'
+      '    but WITHOUT ANY WARRANTY; without even the implied warranty of'
+      '    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the'
+      '    GNU Affero General Public License for more details.'
+      ''
+      '    You should have received a copy of the GNU Affero General Public License'
+      '    along with this program.  If not, see <https://www.gnu.org/licenses/>.'
+      ''
+      'Also add information on how to contact you by electronic and paper mail.'
+      ''
+      'If your software can interact with users remotely through a computer network, you should also make sure that it provides a way for users to get its source. For example, if your program is a web application, its interface could display a "Source" link that leads users to an archive of the code. There are many ways you could offer source, and different solutions will be better for different programs; see section 13 for the specific requirements.'
+      ''
+      'You should also get your employer (if you work as a programmer) or school, if any, to sign a "copyright disclaimer" for the program, if necessary. For more information on this, and how to apply and follow the GNU AGPL, see <https://www.gnu.org/licenses/>.'
+    )
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+  object form2close: TBitBtn
+    Left = 738
+    Height = 38
+    Top = 448
+    Width = 126
+    Caption = 'OK'
+    Glyph.Data = {
+      36090000424D3609000000000000360000002800000018000000180000000100
+      2000000000000009000064000000640000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000004EAA152450AA
+      19D050AB18C255AA110F00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000051AA194850AB17EF50AB
+      18FF50AB18FF50AA18B840BF0004000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000FF000151AA177850AB18FE50AB18FF51AB
+      18D150AB18F850AB18FF4FAB1991000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000055AA150C51AB18AB50AB18FF50AB18FF50AB187F7F7F
+      000252AD1A3B50AB18F950AB18FF50AA19660000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000050AB18C050AB18FF50AB18F24EAA174E000000000000
+      00000000000050AA186050AB18FF50AB18FB4EAD184100000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000050AB18BC51AB18D453AC192800000000000000000000
+      0000000000000000000050AB188950AB18FF50AB18ED4EAA1524000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000055AA000350AA18B250AB18FF4FAB18D755AA110F0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000004EB1140D50AA18D350AB18FF50AA18B840BF
+      0004000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000050A7182050AB18EA50AB18FF4FAB
+      1991000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000052AD1A3B50AB18F950AB
+      18FF50AA19660000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000050AA186050AB
+      18FF50AB18FB4EAD184100000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000000000050AB
+      188950AB18FF50AB18ED4EAA1524000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000000000055AA
+      000350AA18B250AB18FF51AB18D4000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00004EB1140D51AA18C151AA18C1000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000
+    }
+    OnClick = form2closeClick
+    TabOrder = 1
+  end
+  object Labelabout: TLabel
+    Left = 40
+    Height = 35
+    Top = 405
+    Width = 237
+    Caption = 'Real-ESRGAN/GUI'
+    Font.CharSet = GB2312_CHARSET
+    Font.Height = -27
+    Font.Name = '微软雅黑'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Image1: TImage
+    Left = 24
+    Height = 265
+    Top = 88
+    Width = 265
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B47726170686963D72E000089504E47
+      0D0A1A0A0000000D494844520000020000000200020300000089163C69000019
+      297A5458745261772070726F66696C6520747970652065786966000078DAAD9B
+      E9751CBB9284FFC38A3101FB620ED6739E0763FE7C816AF2E94AA4245E8E28B2
+      A9EE2A2CB94446244A66FFEF7F8EF91FFE94E8BC89A9D4DC72B6FC892D36DFF9
+      A5DAE74FBF3F9D8DF7E7DB1FFF7AF71FEF9BF70F3C6F055EC3F341CDCFAB7B7B
+      FF6DA0D7ABEBFC967E18A8CED707E39F1FB4F89ABEFE34D06BA2A0156909EB35
+      507B0D14FCF3817B0DD09F6DD9DC6AF9710B633FAFEB6DA3F5F936FAD1D6BDD4
+      BAF65ACD4FFF8E05EBADC43CC1FB1D5CB0FC0CC13F0B08FA0E26747E29F767D3
+      855CD6F919F919427EAD04837C64A7F73F4C688E961A3FBCE8676FB98FBCF5F6
+      9BF9D95BD1BF2E093F1939BFBF7EF8BE71E963AF5CD3FF3073ACAFDFFC3FDFEF
+      097FBFE2E81FD6D7F739AB9EBB6776D163C6D4F9B5A9B7ADDCDFB88E41A2A6AE
+      86A5655BF84E0C51EE57E3AB12D593505876DAC1D774CD79DC755C74CB7577DC
+      BEAFD34D9618FD36BEF08BF71377E9CD1A8A6F7EE24387E7F872C797D0C20A15
+      5FCEEBF618FCFB5ADC9DB6D969EE6C959997E352EF18CC71CB97BFCC576F3847
+      A9E09CADEFB6625DDEDFA4753263D04F2EC323EEBC8C9AAE81DFBE7EFE23BF06
+      3C986465A548C3B0E3196224F75F2408D7D1810B13AF4F0EBAB25E036022A64E
+      2CC6053C80D75C482E3B5BBC2FCE61C88A833A4B274FFCC0032E25BF58A48FE4
+      0CBEA95E53734B71F7529F3C6F1BDE07CCF0440A999CAB78A8E3AC1813F15362
+      25867A0A29A694722AA9A6967A0E39E694732E59A0D84B28D194547229A59656
+      7A0D35D654732DB5D6567BF32D009AA9E5565A6DADF5CE9C9D913B77772EE87D
+      F811461CC98C3CCAA8A38D3E099F19679A799659679B7DF91516F8B1F22AABAE
+      B6FA769B50DA71A79D77D975B7DD0FA1768239F1A4934F39F5B4D3DFBDF672EB
+      2F5F5FF09A7B79CD5F4FE9C2F2EE35DE2DE56D08273849F2190EA38A383C5EE4
+      0202DACB67B6BA18BD3C279FD906FC85E4596492CF9693C7F060DCCEA7E3DE7C
+      67FCE35179EE5B7E3325FEC36FFEDF7ACEC8755FF4DCAF7EFBC86B4B65685E8F
+      3D5928A3DA40F6714DF795BFC0E2AFAFE6B30FBEFAFAE781E638CEE70130D87A
+      E00983CCCB61D633227BED6BED72FC2866CFC55BB9B80640961D73B538BBF663
+      D708DAE848D888F0680CB9DD593BCD19A9BE9B2BB8A4F7B6C76C64FF7118F254
+      6A71B0BB961DEAD8690597D7CE2B9C147C1B2BDBD600D0D988996CEB0C9D9AE8
+      5817938755A913262C97B58F2EBEF0FEBA53D93E1201B861FAB6AD5B38A583DC
+      31E6BDD7C09DD5A7B4D87888BD566004FC1CC1F5D94F8D6107BF5298851A1146
+      D7CD398DA2B04F27ACD10FF5251177C4DA12B968BBF8296B0C735DBAFD610144
+      0016B5DBA5BDEBC9ADD77288DD35CE5E8CB523218B651B436F2CDEE65E799EC8
+      1EF6F206B336DD7EB6EB995BA89CE46F6FE59CDC3B266A617BC80DE978ECE9F3
+      CC74FAA881E43805308E75E4DDD736998D51916A5DA16782756C484D0B223B9A
+      6A6439B0D743346F7C44B684D8BA3FD5F5DDB116F5ABD7E6B289A5048C373230
+      6D711C71102A0B49F220C8A4025937164F701FF2A3913D8B5F72F3AED438C798
+      CE93726635BBAAE0628601F32B39899EA6C41A289ABDE69EE71E9D14B25AC264
+      9969A6B1360B1BB83E045C86954D6544D9888088F9C6B0C24923B4531C0C0208
+      09A43DE05388B9D6B8D3B6314457C3AE29963033E06326D4A1B7E512289057DA
+      9322B4FCDEA0D34A7E77D689114B5ACBC77E608EA7DB0D8B2E58B1F8080505B4
+      D758862C70C4FAEE79E5B65D3DE484FE05196D6BEF1971850C676BEFC4D78220
+      96712244C5ED7530430B07E6B14D70645DADAC2F6472A9AF3426F0B25B51B5AA
+      FBB831622F3EE08DBC936B5106ED6BEED249A77DD21E62C226117E3E30199E4C
+      79F4742A0E0791EB99B8AF9073409A5FB6AC1ED306ED09D86153F57962A36203
+      932E3F8C10AF25B64CE1055A43A47457E0D8AD492C8BCE1666D88C11D8C366FB
+      1035D7C1C7EABCF0B96F423105C37A47653BCC570B5B867D31D5AC0BF637D800
+      17E18C0D560BF307E10F32F700632062F14A0EC0B96F70C8C9CE95B998A9863D
+      4B931D73D7FE4623059BCCE9C0F0EAC2196E8456523A23E325E0C5397FD65C6D
+      9BA38937D147284B7FC866A56D0F44F5383AAB579445604C91D54323284EDE75
+      669F721C8D31A22396C4B301CA980EC94CAD83F4F403EDFF019D06094C409EE3
+      E32A33160D9CED515A4728D1923DCE311252E11062E09138F114251098E01670
+      86A8D8B6733FA596DD055CE964AD3D309AA38ED596F799AB1A340A647C2770C2
+      D7DD7B8F04AE2322810F773032FB0C40D572A154D0E750E814FE84101036EA3A
+      DE6748B4892003844E0C6F8E32199B046781A14E60D4E632495DCB18635AB076
+      A60EC8CE8C27123C980C02C0589533072F554F5519B634123730855D247F8D0B
+      9781B67075D63486D00FBB0100B30C6C4522E4D9869C5FEA32BDD7289BD8C19E
+      6F5190A64C750952083D02D793B1A7A603BC8601DAB0E591400E889083E5F9D2
+      800C5316BC68AE011E9048398786707358AB0C79A377C086682A583994413119
+      A051499D05A51ED78ADD4381F232C47FEA84A38740516B4EAB8400B145220124
+      F81E6F8A792C367FA6584CA1BC10C4289105AE10E279C15948911B703951A742
+      98143477A426A9BBD8A489899408B662AACAF49BAA1140BF85BAD9A03048EFC3
+      2E799B011C12C8D27BA761BE76AC96073C06410E65D78795316E2882ABE5BB26
+      4632810A90A100F4F919633024A72724074C6BB53195AF0A424CCBF260904BBE
+      ACE4573B54EA4D29B401A3895FE53A3A75126B38B70D285EE191957A0A50A822
+      03C18C3366E1FA902C85ACAC52D23CB5247823118E0B017836DDBDA38466AACC
+      00B35B99A349BF25340CA93E007B1FB70538DDE41AD29D2890D3C1FAED0A7BF7
+      B9B3854E090D9D34011E9A09D097B9E0916E80B20D48182A29B8748091101847
+      5A059508BC00F355BD9B54E31126D83E0AC91D81B36AF01DE495D1701A68EA83
+      657DFBD46C630154D33870A77380FCCB0556053C646EC2C651332F5B08505774
+      7FB97F592AB750069E38678D22C6F07242D3132761E4EC6A550D252C4B15B300
+      36B8165545869B8B2E4E8299A08B4F0003C5204B0DD0318025DECB81BACA355C
+      B163640C5E11ADFA6460F40AD1227DC4E037CA97DA47AE9648558061CC90AA58
+      33791E2BFCBC7656D45B26DB8934CCC196D928BC804A114C8792F18E1D214EAC
+      1DE3C018E42C641B9631D0E0A581A67C103759D4E6B06B06880E6592E820E021
+      FBF01583475C223AC1343C9C451D5C266B8768ABA448A38C82D4F80F2CDE2AC3
+      0A295CED0725139640E642C60C998750E994DF3D0746C37D73C2EFD40E38A019
+      94457E2D1DA4CDB750272D80D5E02BD5B78A28DD6E9A95413C685E5E0A4CEA46
+      856F58C4C3817D8496C0951DC1BA36895222216D8444404A50211BEC1270F4D3
+      85682087D81D93A2C8C47F0F4AA3A08A982A3442F7885B7608D8F46B01BC01D3
+      6D66C3EAB750AD41EC86B0CC98B0A83591C7C3CF51DD48A9619935D55D6232D8
+      10DC052AD208E64DE9C59EA7B2EBD800EEBC432FD16FCB40C129B2086B341516
+      B2A01253315D17DA122A24FC948D2846FB80028D3441700EEFD10085B96299AD
+      19AADE846491F140FD046E31DA4612B0495200072FB252D65C68BD8A11470297
+      D88B2EA23E4B795A50DD002F70204A2CE84C46F82DA252C1334B1DCB8112ECC2
+      9AD200EB527FC4090C031921F483374285D9594B488814CF002D2A9C00905849
+      6981389B893243C2E8ED292A5EF742A2B08048E027C0300B00A758548BDB9091
+      143CD14270DA0A5E01F1DCE09D2EE1A8BD1B1884B151B212E780283CBCD801AC
+      CE84E281F3486E42FD44EB802854C7C22B01FF1E157B54B814AC9F97115788D0
+      167AE218E919876ECD153B37791208DF9008889025AF55FB1209471CC82C2417
+      3C3649B4435E405AE8E818F016E0288391003A0843352C9269BB09B3279A9EB8
+      C8547A0AB1F4D5D80867F48C05D606E94FAC1145706DA81911C1874D42111880
+      8B6E2FAD8882A4E050916D616F716B27945D4C424CE74661A7ACA2602875B0BC
+      26E9EC13FFC0A05936417E439E98DC644CD22420A5385167CEE19B99D18F5239
+      71AA2641758284AAA7F64464CA41F74B86517C28BE5CEFC97EB06551ED2AD046
+      25F6B76DC2383100FCD060BC89B242F48C55321C12F684025188523731885BBD
+      88962643B126ADD114D83C286767EE08C31ABD28BE0586AC8443C0DB675A80F1
+      28F30FB91BEC008712EC32A3120CF429ECD8092E167F805150ED6017C4443982
+      302F422FF14765613F2EB676C261D567E00BB7528A2A4904245413797B603A09
+      3380FE10DAD107F87DB21317391199041D6E55F4A3C19098B57B490B009BAD47
+      4201601BEA9A578C3BAF3CA6B80874FD82C8A17E8AD87F266702B249F4CA0A85
+      0A8C11D04763B5A4C6131242D420FAA1DC448E905EA5031344205443EA9BFB89
+      27E8E4A68444D8C2564F97E05F1AB012721EF6259E0D53EC50FC5A8A78191047
+      4647D20FD65AB2FAB0673CEC902A859A2873C1563C40047157911394505FCD00
+      280EE84E7980D41206563CB8A99FB8A048543F08DA6E629E7EA02721BE6863D7
+      7CB20AD0095B21A42111B01D212177837AD73E5A72A2B65C44F6F89989A9C149
+      DE66ACA9C602A275F6440648DBC53E6D364507171437024DAAB2C12CD0A6473C
+      B6070ADA9607A955A8CC090B41801086D0E20C2AC3A9082D781F60689060F019
+      6E39E40CE96A65479C5E36DC1DF401E8B2ED138ADA0A514955223849821129E7
+      B03BC0DC6A6CC8E870ED88EBB063887821A0A68FEEC6EE606A1B6122E277968A
+      D1674E49BA1A66B109EA942614C881A4268E4BE7726E83ADACA8C6BAB38815A2
+      B56123AAFF2668195D8D854CC474FFA376421412BC3999AE4645029B200C1D6A
+      0748113B2E76B807B408BEAE5AC515533DAEA7501294CB8D8938020AB0A20412
+      0A9235340CA5F899A7E569C12C10B4C22945F6C8997225562F89EAF2A056872D
+      2F70AEFB8932521932B0454F1DE1236843DBA045C77EACF3AE1CF52609ACF440
+      8E2EE82230B46E6B8D41CF629D442435BB1BC53F10946F3983B5CCB0E4B15328
+      564356568347F2B3510D8E571732DAC4F61B21A2061BBA8C82855C8714A8BF53
+      286447C94BA8E64300430C3B88A6C6481D8E7208279213A193969485F2C03290
+      2D0E18A772192006D500CD77509B0D08958B18AA9F91984038C613D4195C383E
+      AF799BF9D689096F1D9C518BB6C88E91D827458234AF64ECED379286D38BD5A7
+      76253ABC974812E222874A1B0711D2D41658280BE08DA436482A141E95305322
+      3C3908E3A1EC397478DA980ECA81D06DEAAD2C87ADD752272465A949CA28021E
+      99DA67376E207EA8EA1030729A4DC4A45E318240B28BFD2F751CF60DA2B99E66
+      1EB24E9804EB6B22F344B687B0432DF0A2F8B5B28C3DA40C750CEA53B25A62B6
+      45C4D5121DEB6EEA94507D71F08DBB2902523B52EFE6FAEC782041E5414A389F
+      7B0E456A93F6C433B2C6419A6D7509D6829C75D097A38349D0BC2DC5183F2847
+      0BBAAD37F2EDA80CF5E9416B085120C11C1432F1CDF4FAD921C0DA64AB621ADA
+      2D8CCBA2B437957659122CAA1D789BF10B98A740B110B555F996B44EB70368B7
+      1A0960EB4963E09D0ED3B3B817AD40D2C2E203206C1F26599D72049EA19E9426
+      F78D32827ED631A97A86C749B54C44319C791644CB00049D5A636CA7141855B8
+      224FBD2E4404F80D61B70269A465015A12A1BBC8CBCB998AEEE286B975025982
+      440D4BD86C39D9BB79882F128B924E74E1C0BDC519A94CA0FDDE2246A0164207
+      7898605CB6ABDD1346B408D450872817342F2AFA176ECC4396C0159034B321F3
+      13F578C0173206A9BD66F2C1B73596BAB139A85B83F7D31B6CC0A0BC8A1CAC06
+      E777A0039A12C3EAEA8E0EC8ABCF245F2996F42F6AE61788E10617AC8E0E3B46
+      90B697BEB9AE5551815A6F5565CA3CAC380F8A2798C75EC009651DC4CD7AB5A3
+      0060B6EB4C42A1B89BB7507548D74010E1376AA4C835C49AE8A93A52529BC2D5
+      4844EAC00E6F79B58688AF7A4F4A0C463DEA67467C281A81B867DF3BD6001B0D
+      C8E1EE5C230D9DB76A05E9B004E5062D80DE04BCB435DAF0CBDC5C66499FBCAA
+      7500D8C1D804E1F336042C943041394F18903FB5736296A645C5DA286AEAD3DF
+      1CA84C9068AAAD4B7AAAC3A6089C91A4A58EF1CB26A12AD295729B6E43CAD9E8
+      F2ACD8D3C99DCA5EDCF950997D9ED6F589B79F009060EC7ADB81E8314AA70B43
+      261379202AFBBD785B4434EA04490ADFB09F0E679EF1BE3F9CF97179DF19CEFC
+      BADB7F379CF9CC785F1DCEFCDE177F3F9CF9BD2FFE7E38F337AEFD9BE1CCDF47
+      CAEF87339F190F0E885CAFA029D5BB089D16421EB59FE157714270049AA48443
+      45AE287A2C229DE73DE0D8B02644C3D3D3D2F906DA84E4C95DCDB599B98C1288
+      A8A4C4A27F6066E039A4E469444DB5530588C7411DF21EAD8996218D80F905C5
+      A86872B8593FB3A62A104E0E8AA4663C02A6A8F7897C4266A1A88AFA1E95DA1C
+      01C7AC66681C6A404C9D6F74A6427CB986689F0861043145644A6AF5DDA977DC
+      8A9E32A1A8C3993C3218723200B4AADEC4D1F99AD848D8333124C3C5B3A5C010
+      0C14CA8130C867635FE94AB0C9201B0EDAB27828C9A8D4BAE2905FE87A8ACA15
+      17FD368DD54044BBD77390A4353C8DE2E75109299B160D55EF1C168C1797AB6A
+      AD433F1943C759A2157D616F3591D43D93ECA51EC0F1B27A086CDF5189D011B3
+      19909EA523578561505C2436D5019E0AA6224975ACCBB25AD4812653228ACEF5
+      2A42343D471B3D64CAD9ED4332FE6315B53F9F00832505AD31E138E803CA0397
+      362A5CB8471EE989BD0AD9840EAA8F618676A836F61D504AFEEE3FA1D4AC5B14
+      400406F68143101D4B5A65E3DDA6261D24E1465CD418A6316E9207EE1C5D420A
+      C29EF4F858BAF58EEB839E458210A9CD8758E48D4A40C229211127538C674CA6
+      C40A299F1121D7371FA85399A9429840F475FADB92835EC36B1910E64025879E
+      DCE5F2F1204421C1CB20F6BA44A90D72E615BD98E06ECF8FDDEE6F1571AC3322
+      B521E75598FF1DE0ED7EF3DD01DEEE37DF1DE0ED7EF3DD01DEEE37DF1DE0ED7E
+      F3DD01DEEE37DF1DE0ED7EF32F0740D66480B8F061380E1033AE40DC12AC3180
+      8A20271C0C34997ADA053003CB4866B556FC88FBAA8D36B8467CD55D818E9CBE
+      796A6085C80D2D470058617B7AD231B629AAEF2B4CCD0F3D97C1F56101B65C85
+      16866E93174F3D119C416B00390A41C8D1C3963CAC12F63E20671B1ACA782D41
+      EBEAAA01961D9553548C7029A7D74972B01955AAAE8838A45AD4DE4F58E3AC3A
+      A90701FCEC43DDB63192EC106D49B0D589FEA446540975741F45AD153507D36E
+      C76C073EAAFFB8332818A1674B07BD7AFA85CCCF7071F4A00ED7D1A2C3217951
+      2B59D6BF547A9729A5800C343A03832A436CC1F2DBEA41850EF8EAC970D099EE
+      E9D95663126EABA7D6105E5D925DCF7B5097B64EACEA46D4304CA19E24B9A154
+      AFDEE88858A6A041A451D4E683682219220C991122085EF4F447A34AA7758389
+      2A323D620E49B3582792ADA1A5B09F749430E9E8B42146E00A46D0DABA06E3DB
+      EA7005F9FC409F22CB3C18A88348D182485C501075228426DDE3CE1AFF0471BB
+      69A0FF0EFAADD7AF0EF42CDEFE63F977F1E697D57FB6F63FCC60BEBE97522722
+      91088A3ADF243611BDB8BF6D7534E145CE226489354A5EAD2C526D3ED4A28E6B
+      8A4E9108EF45EC3E5CEEBC9AC088120B6141FA2245B30E7EB7DA26634B3B7518
+      85925F44064252866A763C7F58AAF9DC7C5FB39EF97FF0FC6BA0D27C281375C7
+      8E530B71E838FBE88C46DD8A84045E1D800411361A92EDEEA0730BB42C842007
+      F58C764CC9A8C9C1CA21652322AAA31EC1043BF788A3DCAE6C28568D82D53CB0
+      17D0D96A29A0D0752E94F44459506BBCA38E366C5107E52061DD102BF0106288
+      3A8E6A36C32B1D384782597168AB03BA8FA4A5F9E98D0318D787FD001807217F
+      16B4B1A483F25FC0EE5C10759DE7D608C7810D01580B0E6CF4ACC989F5DB8F0D
+      9A8F3F0836A4719F82D179C1067692E213FA0465C656D3A28C4FCB36411401A8
+      5ECDD4237B6DC36189B9FE74D1AAFA9F7A9EE2EC3C2E97ABA10C3DE7E2F718B7
+      15E578515B25456A96566072DC11FCFE64C1EF26FBA3C1CC6331355CAECDFEB5
+      C9CCE7179C4BCBEBD25940AC45F9AAB3FC7B12806AC290CBDECB1C1148C9D6B1
+      2518DDE1D627CE3647C0A854D145C2EE8E84CA9D64647F41B55784D5E624728B
+      A1D133E11D6A9593974FC054EF83F2D0089D00586A8E9EC692C0FBA983C93ADD
+      3D2ABA1223EAD9A7FC1076B652A67D14068CA3EAF9723D32319F63E6F7E57CBC
+      98BB1673DE972241F95A8C7D96A3FF04F1C1827E5DCEA3FBDF97F35ACC7D4EE5
+      6D397FB2CD3B9A998FE0EC12ADCF363BEA7D12098E779ED63E3A91CF2990BA3F
+      A61546EA4D7831FD9AA1EF45FA5FD17CF428ABE63F2D7EEE1AF335DF7CEE1AF3
+      35DF7CEE1AF335DF7CEE1AF357BE897F0E5BF35DDBBC99C67CD7366FA631DFB5
+      CD9B69CC776DF3661AF3B96D1EC09B79BDC4F1D67F5BB9C34A1E971FE431DC9C
+      AD4138B63ECFFBBCE4B1D348C53DC21DFAAD8ECB1E957F7B3DEBDF21C7D7F8DE
+      AE71358A9E1635EAC1A49F9ECEFEF8F5D792F60340EBC8E7B7455180EAFF3847
+      BD98FD578B39B755A3ADC201905167AFF5B41ABA9ECD88886361FC45F8DBA92E
+      0F27BB28FF86F1C82E3532A21EC83C108714A04A7D4009D426B994392FA3FF23
+      0055102AF5F90D5E6BBECACC3E275A5FA0D86C5721F31E3178EDAA4754A3333A
+      E2B17F0A3E754266FE207A5EC18300553FFBD798FB9B22FD53D098BFA752BFA7
+      05E6EB94EA634E60DE4901BCFC8F8187C9F4B4EE5BECFC183A662684F3F334DF
+      2BE2EE63F3AF98FBFDA1C9F3FA848DF9286ED27B09FD440CBE40EFC711CD5F4C
+      F9F12BFE5AFAFF8FFF079B9692D35583E5870000018469434350494343207072
+      6F66696C650000789C7D913D48C3401CC55F53A52A2D0E761071C8509DAC888A
+      384A158B60A1B4155A7530B9F40B9A3424292E8E826BC1C18FC5AA838BB3AE0E
+      AE8220F801E2EAE2A4E82225FE2F29B488F1E0B81FEFEE3DEEDE0142A3C254B3
+      6B025035CB48C5636236B72A065E11402F4208635C62A69E482F66E039BEEEE1
+      E3EB5D9467799FFB738494BCC9009F483CC774C322DE209ED9B474CEFBC46156
+      9214E273E231832E48FCC875D9E537CE4587059E193632A979E230B158EC60B9
+      8359C95089A789238AAA51BE907559E1BCC559ADD458EB9EFC85C1BCB692E63A
+      CD61C4B18404921021A386322AB010A55523C5448AF6631EFE21C79F24974CAE
+      3218391650850AC9F183FFC1EF6ECDC2D4A49B148C01DD2FB6FD310204768166
+      DDB6BF8F6DBB7902F89F812BADEDAF3680D94FD2EB6D2D7204F46F0317D76D4D
+      DE032E7780C1275D322447F2D3140A05E0FD8CBE29070CDC027D6B6E6FAD7D9C
+      3E0019EA6AF906383804468B94BDEEF1EE9ECEDEFE3DD3EAEF077EF272AC0803
+      70B400000D7669545874584D4C3A636F6D2E61646F62652E786D700000000000
+      3C3F787061636B657420626567696E3D22EFBBBF222069643D2257354D304D70
+      43656869487A7265537A4E54637A6B633964223F3E0A3C783A786D706D657461
+      20786D6C6E733A783D2261646F62653A6E733A6D6574612F2220783A786D7074
+      6B3D22584D5020436F726520342E342E302D4578697632223E0A203C7264663A
+      52444620786D6C6E733A7264663D22687474703A2F2F7777772E77332E6F7267
+      2F313939392F30322F32322D7264662D73796E7461782D6E7323223E0A20203C
+      7264663A4465736372697074696F6E207264663A61626F75743D22220A202020
+      20786D6C6E733A786D704D4D3D22687474703A2F2F6E732E61646F62652E636F
+      6D2F7861702F312E302F6D6D2F220A20202020786D6C6E733A73744576743D22
+      687474703A2F2F6E732E61646F62652E636F6D2F7861702F312E302F73547970
+      652F5265736F757263654576656E7423220A20202020786D6C6E733A64633D22
+      687474703A2F2F7075726C2E6F72672F64632F656C656D656E74732F312E312F
+      220A20202020786D6C6E733A47494D503D22687474703A2F2F7777772E67696D
+      702E6F72672F786D702F220A20202020786D6C6E733A746966663D2268747470
+      3A2F2F6E732E61646F62652E636F6D2F746966662F312E302F220A2020202078
+      6D6C6E733A786D703D22687474703A2F2F6E732E61646F62652E636F6D2F7861
+      702F312E302F220A202020786D704D4D3A446F63756D656E7449443D2267696D
+      703A646F6369643A67696D703A31376536646335302D653566632D346435332D
+      623364662D646164366135373262623662220A202020786D704D4D3A496E7374
+      616E636549443D22786D702E6969643A37363230323531322D623333312D3466
+      62382D386439632D373037333263663237623838220A202020786D704D4D3A4F
+      726967696E616C446F63756D656E7449443D22786D702E6469643A3965643161
+      3935392D343734342D346430372D386461622D37633332626162323439393122
+      0A20202064633A466F726D61743D22696D6167652F706E67220A20202047494D
+      503A4150493D22322E30220A20202047494D503A506C6174666F726D3D225769
+      6E646F7773220A20202047494D503A54696D655374616D703D22313638383930
+      39303737373139323431220A20202047494D503A56657273696F6E3D22322E31
+      302E3332220A202020746966663A4F7269656E746174696F6E3D2231220A2020
+      20786D703A43726561746F72546F6F6C3D2247494D5020322E3130220A202020
+      786D703A4D65746164617461446174653D22323032333A30373A30395432313A
+      32343A33362B30383A3030220A202020786D703A4D6F64696679446174653D22
+      323032333A30373A30395432313A32343A33362B30383A3030223E0A2020203C
+      786D704D4D3A486973746F72793E0A202020203C7264663A5365713E0A202020
+      20203C7264663A6C690A20202020202073744576743A616374696F6E3D227361
+      766564220A20202020202073744576743A6368616E6765643D222F220A202020
+      20202073744576743A696E7374616E636549443D22786D702E6969643A613236
+      39663636632D643130632D343032612D623438342D6466396534346562376339
+      33220A20202020202073744576743A736F6674776172654167656E743D224769
+      6D7020322E3130202857696E646F777329220A20202020202073744576743A77
+      68656E3D22323032332D30372D30395432313A32343A3337222F3E0A20202020
+      3C2F7264663A5365713E0A2020203C2F786D704D4D3A486973746F72793E0A20
+      203C2F7264663A4465736372697074696F6E3E0A203C2F7264663A5244463E0A
+      3C2F783A786D706D6574613E0A20202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202020202020202020202020202020200A2020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020202020202020202020200A202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020200A20202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      0A20202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202020200A2020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020200A202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020200A20202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202020202020202020202020202020202020200A2020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020202020202020202020202020200A202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020200A20
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020200A20202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202020202020200A2020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020200A202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020200A20202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202020202020202020202020202020202020202020200A2020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020202020202020202020202020202020200A202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      200A202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020200A20202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20202020202020202020200A2020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020202020200A202020202020202020202020202020
+      2020202020202020202020200A3C3F787061636B657420656E643D2277223F3E
+      53DFE3FD00000009504C5445000094000000FFFFFF985A9DFD0000000174524E
+      530040E6D86600000001624B47440088051D4800000009704859730000127400
+      00127401DE661F780000000774494D4507E707090D1825C97ACD4D0000060049
+      44415478DAEDDDC192E3261080615115EE7B08EFC31E722755F0FEAF92B14443
+      230982A7D66613FF5DB5331E8F2C7F92A16934C6BB6D04411004411004411004
+      411004411004411004F11F889402809B7B5D4AFEEECE6F62BF1E9952FC57C0BE
+      D9BE9D7DDCF09B49C7F723F63B8F8D8DECAE7EF7F28B2EA0A3BF05E4ED0F40DE
+      A5FEC1CA8DFADDE75FC43E204D036C0B08979D7C13106601AE0594E7BA05F879
+      409C05A413C04B0B90E775F5898F870BC0DD1FE59300730770BF00902601F60C
+      08F515B802A206DCF5DE7DFBE3B0E6018FD76107F8DCFB8DB48ED21E82DC9804
+      DCE79613204A13FBDAD264C0D1E7C5EFF283DC2DA093068E3DDB69803B76F3E3
+      006CD233F7ED4C7E1E05F09300F3042096DCE3EFCEDF0E88FAB5780B60538068
+      6F019D34D0026A8F894F009A4E6C1B407C0EE0F2AE5CB14F02C209901BDF5FFB
+      8D0CE8A4010D30B9D958E9D4FD46A801E6040846003F9F04C8986A25C5DD03FC
+      15E0F5FE8291D6FF33EF2503FCB01BAAD24006BC4E1E880A902425DD027CDE8B
+      1FE421DD8E259FFE0BA0F42A7F9CFD16F0F5C3370092D00EBCFDFA974EAD4B46
+      612B193E6F797C69BAAEDF4AF7CB3BF78334B003ACA4F4636B1B72A7B9014843
+      3D0072C27A002BBB1C0252697BF168AB76EB034AEFAE05C9FE2C26FF3A1FC515
+      D04B03AA9AB28F873D007F6CCD8E5A80CBA7C028F819E02401E5D3340188D251
+      6DAD6DEF01366F6E4A3DD2006C03D8F720803002F80A886380C927CCE83A5D03
+      A206B8027043402C9922038ECAB2B43A5DBDBBF3BCE00AB025033E2833803A6E
+      DB5AFB77004697649733E05AC0E35653158C262629B5A5F70910F523F4C4E404
+      081A6066007153531E55F9F6009B6CE4EDB511BA5A2C6780974EB3F5013A13D7
+      CAB70BB00230D2F07DA91E520B78DC3901B02DE071143F07803D019A92F2CC08
+      E00A200E0032B265403EC03EC009E0544ED5D9421984BEB6508D7B00080D20DC
+      E4817BC0F1F2872EC0966C35026C7AD82C036D1F600520AF5DBC00641494C1AB
+      9B06D470DC5C48E8017E9C01BE01D86F02F29709C09F0DA0341E055047E5EBF4
+      A45790E98AC8E971A807704D1B30D2F7FD19508661977461389C9A3500DB0304
+      DD0D37499C31035C194A2E806D04C82FE85E68C8907E371AA6FD54964454F9C7
+      C1DF016C2A6D7A0C90D3E75407BB05D47CEDB7D20FA5EFA502F0B5149B0048EE
+      79F423294E878050A7123585ED80B0D582B102FA69A005C81090D2DFCF00DC00
+      B0CD019C3CF124C0D7D95CA817A982A9805067443B208C01B6161D5B3B18DD02
+      EA08D094123225B902DC04C09772EF71406608080A10DB6B68BE5C5928D3F21D
+      E0C7803A1C1DFB8E3D80546B6A465FAE54FA7AA927955AB0690FB397C7ED68F3
+      FB2B6AA9DFCF4613C3778519F33E0210D702EC7AC0E23F3EB98F071004411004
+      41100441100441100441100441FCB228EF51F905A1F73BBD48E84500DBFE3DDA
+      5EDFA9FA5A4079E3C22A805B0D484F00E20B5BF632805B0D488B016A91D03AC0
+      FE4AAC02A845426B006A91D032C0B614A01609AD0284A500F31B003C80A500FD
+      441F0C30FA6DA2000000F84080975179E958F0D100BD48282CAB09D5325FB562
+      EF4300490164B5C5FB27264B01B24848AF5D7BEBDC5016091D57CBDC9B017A81
+      9E4DED62E2F75EA008CD47BA2CB84413F47AF21517A9EA729DF85EC076F9549B
+      F066405DFE5E561ABD17B0A94F97920F00792F402F124AC3D52076F152110000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000FF5340580D48CB016135202D0784D580B41C109602EC13A7E065EF270C
+      4B014F9C82D7BD9F302C05CC9F8217BEA1312C0598D953F0B2E1D84D7EB4FBCB
+      00663560F4F1FE9F7106D262805DDD0B56E701B738139A34FD1F3CBC6C389EDD
+      EFCB0A12BF12F0C4097819C02F062C2FCB3F7E6AF6F1D373AE90000000000000
+      00BF0FC026B5FA15C04702E80500000000000000000000000000000000000000
+      000000B008905605000005E057F7020000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000F858C03FFC
+      5CFD05BFE60C970000000049454E44AE426082
+    }
+    Stretch = True
+  end
+end
