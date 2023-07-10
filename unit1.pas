@@ -311,18 +311,17 @@ end;
 
 procedure TForm1.BitBtn8Click(Sender: TObject);
 begin
-  //771 558
-  if Form1.Height=670 then
-  begin
-    Form1.Height:=925;
-    BitBtn8.Caption:=hidelog;
-    abort;
-  end;
-  if Form1.Height=925 then
-  begin
-    Form1.Height:=670;
-    BitBtn8.Caption:=displaylog;
-  end;
+  if Bitbtn8.Caption = displaylog then
+    begin
+      Form1.Height:=Form1.Height+255;
+      BitBtn8.Caption:=hidelog;
+      abort;
+    end
+  else
+    begin
+      Form1.Height:=Form1.Height-255;
+      BitBtn8.Caption:=displaylog;
+    end;
 end;
 
 procedure TForm1.BitBtn9Click(Sender: TObject);
@@ -463,7 +462,7 @@ var
   langFile: TIniFile;
   langPath: string;
 begin
-  Form1.Height:=670;
+  //Form1.Height:=670;
   EditTargetPath.Text:=ExtractFileDir(ParamStr(0));
   BinFiles := TStringList.Create;
   try

@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="17" Y="13"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -21,9 +21,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="213"/>
-        <CursorPos X="11" Y="213"/>
-        <UsageCount Value="36"/>
+        <TopLine Value="486"/>
+        <CursorPos X="5" Y="465"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -34,7 +34,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="UnTerminal.pas"/>
@@ -43,7 +43,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="unit2.pas"/>
@@ -55,7 +55,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="3"/>
         <CursorPos X="3" Y="38"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -65,14 +65,14 @@
         <EditorIndex Value="10"/>
         <TopLine Value="1156"/>
         <CursorPos X="14" Y="1174"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="19"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\Users\perfectBlue\Documents\fpcdeluxe\fpcupdeluxe\fpcsrc\packages\libogcfpc\examples\filesystem\directory\directory.pp"/>
         <EditorIndex Value="9"/>
         <TopLine Value="52"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -80,7 +80,7 @@
         <EditorIndex Value="8"/>
         <TopLine Value="530"/>
         <CursorPos Y="549"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -89,7 +89,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="1560"/>
         <CursorPos X="14" Y="1524"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="16"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -98,7 +98,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="760"/>
         <CursorPos X="3" Y="775"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -107,7 +107,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="73"/>
         <CursorPos X="14" Y="91"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -116,7 +116,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="220"/>
         <CursorPos X="14" Y="238"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -124,11 +124,11 @@
         <EditorIndex Value="1"/>
         <TopLine Value="230"/>
         <CursorPos X="10" Y="249"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="unit1.pas"/>
         <Caret Line="471" Column="65" TopLine="453"/>
@@ -236,10 +236,6 @@
       <Position>
         <Filename Value="unit1.pas"/>
         <Caret Line="172" Column="5" TopLine="152"/>
-      </Position>
-      <Position>
-        <Filename Value="unit1.pas"/>
-        <Caret Line="213" Column="11" TopLine="218"/>
       </Position>
       <Position>
         <Filename Value="unit1.pas"/>
