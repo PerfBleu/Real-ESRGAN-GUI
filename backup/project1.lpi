@@ -12,6 +12,7 @@
       <XPManifest>
         <DpiAware Value="True"/>
         <LongPathAware Value="True"/>
+        <AnsiUTF8 Value="True"/>
         <TextName Value="Real-ESRGAN/GUI"/>
         <TextDesc Value="Real-ESRGAN/GUI"/>
       </XPManifest>
