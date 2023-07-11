@@ -5,7 +5,8 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
+  ExtCtrls;
 
 type
 
@@ -13,6 +14,7 @@ type
 
   TForm2 = class(TForm)
     form2close: TBitBtn;
+    Image1: TImage;
     Labelabout: TLabel;
     Memoabout: TMemo;
     procedure form2closeClick(Sender: TObject);

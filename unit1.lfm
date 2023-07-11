@@ -648,19 +648,31 @@ object Form1: TForm1
     TabOrder = 8
   end
   object GroupBox3: TGroupBox
+    AnchorSideTop.Control = ProgressBar1
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
     Left = 8
-    Height = 240
-    Top = 672
+    Height = 0
+    Top = 671
     Width = 980
+    Anchors = [akTop, akBottom]
+    BorderSpacing.Top = 55
+    BorderSpacing.Bottom = 7
     Caption = 'log'
-    ClientHeight = 211
+    ClientHeight = 0
     ClientWidth = 976
     TabOrder = 9
     object Memo1: TMemo
+      AnchorSideTop.Control = GroupBox3
+      AnchorSideBottom.Control = GroupBox3
+      AnchorSideBottom.Side = asrBottom
       Left = 8
-      Height = 202
-      Top = 0
+      Height = 0
+      Top = 2
       Width = 960
+      Anchors = [akTop, akBottom]
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 9
       ScrollBars = ssBoth
       TabOrder = 0
       WordWrap = False
@@ -677,8 +689,8 @@ object Form1: TForm1
     Left = 10
     Height = 46
     Top = 612
-    Width = 162
-    Caption = 'Display log'
+    Width = 146
+    Caption = 'Show log'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
       2000000000000009000064000000640000000000000000000000000000000000
@@ -759,9 +771,9 @@ object Form1: TForm1
     TabOrder = 11
   end
   object Panel1: TPanel
-    Left = 163
+    Left = 168
     Height = 528
-    Top = 67
+    Top = 58
     Width = 667
     ClientHeight = 528
     ClientWidth = 667
@@ -788,14 +800,14 @@ object Form1: TForm1
         Left = 10
         Height = 32
         Top = 250
-        Width = 365
+        Width = 309
         TabOrder = 1
       end
       object BitBtnTargetPath: TBitBtn
-        Left = 384
+        Left = 336
         Height = 38
         Top = 250
-        Width = 230
+        Width = 278
         Caption = 'Select Target Folder'
         Glyph.Data = {
           36090000424D3609000000000000360000002800000018000000180000000100
@@ -880,7 +892,7 @@ object Form1: TForm1
         Left = 10
         Height = 38
         Top = 10
-        Width = 230
+        Width = 278
         Caption = 'Select Source Files'
         Glyph.Data = {
           36090000424D3609000000000000360000002800000018000000180000000100
@@ -1220,9 +1232,9 @@ object Form1: TForm1
     TabOrder = 12
   end
   object Panel2: TPanel
-    Left = 298
+    Left = 288
     Height = 422
-    Top = 106
+    Top = 112
     Width = 422
     ClientHeight = 422
     ClientWidth = 422
@@ -1234,7 +1246,6 @@ object Form1: TForm1
       Top = 77
       Width = 278
       TabOrder = 0
-      Text = 'Edit1'
     end
     object Label1: TLabel
       Left = 38
@@ -1268,14 +1279,6 @@ object Form1: TForm1
       Caption = 'Model'
       ParentColor = False
     end
-    object Edit3: TEdit
-      Left = 38
-      Height = 32
-      Top = 250
-      Width = 346
-      TabOrder = 2
-      Text = 'Edit3'
-    end
     object Button2: TButton
       Left = 254
       Height = 37
@@ -1283,7 +1286,7 @@ object Form1: TForm1
       Width = 113
       Caption = 'Apply'
       OnClick = Button2Click
-      TabOrder = 3
+      TabOrder = 2
     end
     object BitBtn9: TBitBtn
       Left = 326
@@ -1327,6 +1330,14 @@ object Form1: TForm1
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = BitBtn9Click
+      TabOrder = 3
+    end
+    object ComboBoxEditModel: TComboBox
+      Left = 40
+      Height = 32
+      Top = 256
+      Width = 334
+      ItemHeight = 24
       TabOrder = 4
     end
   end
@@ -1417,10 +1428,10 @@ object Form1: TForm1
     Visible = False
   end
   object BitBtn11: TBitBtn
-    Left = 173
+    Left = 157
     Height = 46
     Top = 612
-    Width = 113
+    Width = 129
     Caption = 'Config'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
@@ -1502,7 +1513,7 @@ object Form1: TForm1
     TabOrder = 15
   end
   object Panel3: TPanel
-    Left = 173
+    Left = 181
     Height = 392
     Top = 136
     Width = 629
@@ -1627,10 +1638,10 @@ object Form1: TForm1
       TabOrder = 1
     end
     object StaticText1: TStaticText
-      Left = 65
-      Height = 48
-      Top = 317
-      Width = 271
+      Left = 29
+      Height = 80
+      Top = 296
+      Width = 351
       Caption = '部分设置需重启程序才能生效'#13#10'Some settings need to restart the program to take effect'
       TabOrder = 2
     end

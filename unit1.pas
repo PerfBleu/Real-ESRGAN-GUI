@@ -33,10 +33,10 @@ type
     Button1: TButton;
     Button2: TButton;
     ComboBox1: TComboBox;
+    ComboBoxEditModel: TComboBox;
     ComboBoxPicModelSelector: TComboBox;
     Edit1: TEdit;
     Edit2: TEdit;
-    Edit3: TEdit;
     EditPrefix: TEdit;
     EditTargetPath: TEdit;
     GroupBox1: TGroupBox;
@@ -103,7 +103,7 @@ var
   steps: integer=0;
   totalsteps: integer=0;
   stopflag: bool=False;
-  displaylog: string='Display log';
+  displaylog: string='Show log';
   hidelog: string='Hide log';
 implementation
 
@@ -158,6 +158,7 @@ begin
   form1.BitBtnStart.Visible:=False;
   form1.BitBtn11.Enabled:=False;
 end;
+
 procedure enable_start();
 begin
   form1.bitbtnstart.Enabled:=True;
@@ -238,11 +239,7 @@ begin
   FilePath := 'config.ini';
   IniFile := TIniFile.Create(FilePath);
   try
-    // 读取 INI 文件中的值
     IniFile.WriteString('base', 'lang', ComboBox1.Caption);
-    // 处理读取到的值
-    // 例如，将其显示在 Memo 中
-    //Memo1.Lines.Add(Value);
   finally
     IniFile.Free;
   end;
@@ -260,7 +257,7 @@ begin
   disable_all;
   Edit1.Text:=ListView1.Selected.SubItems[1];
   Edit2.Text:=ListView1.Selected.SubItems[3];
-  Edit3.Text:=ListView1.Selected.SubItems[2];
+  //Edit3.Text:=ListView1.Selected.SubItems[2];
   Panel2.Visible:=True;
 end;
 
@@ -327,13 +324,17 @@ end;
 procedure TForm1.BitBtn9Click(Sender: TObject);
 var
   OpenDialog: TSelectDirectoryDialog;
+  tsltmp: TStringArray;
+  filename: string;
 begin
+  tsltmp:=ListView1.Selected.SubItems.Strings[1].Split([syssep]);
+  filename:=tsltmp[length(tsltmp)-1];
   OpenDialog := TSelectDirectoryDialog.Create(Self);
   try
     OpenDialog.Options:=[ofPathMustExist];
     if OpenDialog.Execute then // 显示文件保存对话框
     begin
-      Edit1.Text:=OpenDialog.Files.Text;
+      Edit1.Text:=OpenDialog.Files.Text+syssep+filename;
     end;
   finally
     OpenDialog.Free;
@@ -382,13 +383,12 @@ begin
     getattr(steps,1)+'" -n '+getattr(steps,2)+' -s '+getattr(steps,3));
     proc.Open(commandhead,' -i "'+getattr(steps,0)+'" -o "'+
     getattr(steps,1)+'" -n '+getattr(steps,2)+' -s '+getattr(steps,3));
-    //Form1.ProgressBar1.Position:=steps+1;
     steps+=1;
-    //showmessage(inttostr(steps)+inttostr(totalsteps));
   end
   else
   begin
-    Application.MessageBox(PChar('Total tasks '+inttostr(steps)+' Finished!'),'Finish!', MB_ICONINFORMATION+MB_OK);
+    Application.MessageBox(PChar('Total tasks '+inttostr(steps)+' Finished!'),
+                           'Finish!', MB_ICONINFORMATION+MB_OK);
     enable_start;
   end;
 end;
@@ -402,16 +402,6 @@ begin
   totalsteps:= ListView1.Items.Count;
   steps:=0;
   stepTasks;
-  //EditCmd.Text:=commandhead;
-  //proc.Open(EditCmd.Text,'');
-  //for i:=0 to ListView1.Items.Count-1 do
-  //begin
-  //  ProgressBar1.Position:=i+1;
-  //  //EditCmd.Text:=commandhead+' -i '+getattr(i,0)+' -o '+
-  //  //getattr(i,1)+' -n '+getattr(i,2)+' s '+getattr(i,3);
-  //  proc.Open(commandhead,' -i '+getattr(i,0)+' -o '+
-  //  getattr(i,1)+' -n '+getattr(i,2)+' s '+getattr(i,3));
-  //end;
 end;
 
 procedure TForm1.BitBtnTargetPathClick(Sender: TObject);
@@ -435,7 +425,6 @@ var
   frm2:TForm;
 begin
   frm2 :=  TForm2.Create(nil);
-  //if frm2=nil then frm2 = Tfrm2.Create(Application);
   frm2.ShowModal;
 end;
 
@@ -443,7 +432,7 @@ procedure TForm1.Button2Click(Sender: TObject);
 begin
   ListView1.Selected.SubItems[1]:=Edit1.Text;
   ListView1.Selected.SubItems[3]:=Edit2.Text;
-  ListView1.Selected.SubItems[2]:=Edit3.Text;
+  ListView1.Selected.SubItems[2]:=ComboBoxEditModel.Text;
   Panel2.Visible:=False;
   enable_all;
 end;
@@ -456,11 +445,11 @@ var
   tsatmp: TStringArray;
   tsatmp2: TStringArray;
   IniFile: TIniFile;
+  LangFile: TIniFile;
   FilePath: string;
   lang: string;
-
-  langFile: TIniFile;
   langPath: string;
+  icontmp: TCustomIcon;
 begin
   //Form1.Height:=670;
   EditTargetPath.Text:=ExtractFileDir(ParamStr(0));
@@ -472,8 +461,10 @@ begin
       tsatmp := BinFiles.Strings[i].Split(['/','\']);
       tsatmp2 := tsatmp[Length(tsatmp)-1].Split(['.bin']);
       ComboBoxPicModelSelector.Items.Add(tsatmp2[0]);
-      ComboBoxPicModelSelector.ItemIndex:=0;
+      ComboBoxEditModel.Items.Add(tsatmp2[0]);
     end;
+    ComboBoxPicModelSelector.ItemIndex:=0;
+    ComboBoxEditModel.ItemIndex:=0;
   finally
     BinFiles.Free;
   end;
@@ -508,14 +499,9 @@ begin
   syssep:='/';
   {$endif}
   FilePath := 'config.ini';
-  // 创建 TIniFile 对象并打开 INI 文件
   IniFile := TIniFile.Create(FilePath);
   try
-    // 读取 INI 文件中的值
     lang := IniFile.ReadString('base', 'lang', 'en');
-    // 处理读取到的值
-    // 例如，将其显示在 Memo 中
-    //Memo1.Lines.Add(Value);
   finally
     IniFile.Free;
   end;
@@ -523,9 +509,9 @@ begin
   then
   begin
     langpath := 'lang'+syssep+lang+'.ini';
-    langfile := TIniFile.Create(langPath);
+    LangFile := TIniFile.Create(langpath);
     try
-      // 读取 INI 文件中的值
+      // 语言
       BitBtnAddPic.Caption := IniFile.ReadString('langstring', 'addtask', 'addtask');
       BitBtn3.Caption:=IniFile.ReadString('langstring', 'edittask', 'edittask');
       BitBtn2.Caption:=IniFile.ReadString('langstring', 'clearall', 'clearall');
@@ -545,20 +531,24 @@ begin
       GroupBox2.Caption:=IniFile.ReadString('langstring', 'setparameters', 'setparameters');
       LabelSelectPicModel.Caption:=IniFile.ReadString('langstring', 'model', 'model');
       LabelPicScale.Caption:=IniFile.ReadString('langstring', 'scale', 'scale');
-      Label2.Caption:=IniFile.ReadString('langstring', 'filename', 'filename');
+      Label3.Caption:=IniFile.ReadString('langstring', 'filename', 'filename');
       RadioButton1.Caption:=IniFile.ReadString('langstring', 'prefix', 'prefix');
       RadioButton2.Caption:=IniFile.ReadString('langstring', 'suffix', 'suffix');
-
-
-
-      // 处理读取到的值
-      // 例如，将其显示在 Memo 中
-      //Memo1.Lines.Add(Value);
     finally
-      IniFile.Free;
+      LangFile.Free;
     end;
   end
 end;
+
+//procedure TForm1.ListView1CustomDrawItem(Sender: TCustomListView;
+//  Item: TListItem; State: TCustomDrawState; var DefaultDraw: Boolean);
+//begin
+//  Case Item.SubItems.Strings[4] of
+//  'DONE': Sender.Canvas.Brush.Color:=clGreen;
+//  'PENDING': Sender.Canvas.Brush.Color:=clYellow;
+//  else ;
+//  end;
+//end;
 
 procedure TForm1.ListView1SelectItem(Sender: TObject; Item: TListItem;
   Selected: Boolean);
@@ -592,6 +582,7 @@ begin
       stopflag:=False;
     end;
     Form1.ListView1.Items[steps-1].SubItems[4]:='DONE';
+    //Form1.ListView1.Selected.;
     Form1.ProgressBar1.Position:=steps;
     stepTasks;
   end;
