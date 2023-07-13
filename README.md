@@ -1,9 +1,12 @@
 # Real-ESRGAN-GUI
+![screenshot](https://raw.githubusercontent.com/PerfBleu/Real-ESRGAN-GUI/main/reg.png)
 - A native, cross-platform, design for batch process GUI for Real-ESRGAN
 - Written by FreePascal and Lazarus
+
+## Screenshot
 ![screenshot](https://raw.githubusercontent.com/PerfBleu/Real-ESRGAN-GUI/main/screenshot.png)
 
-# Usage
+## Usage
 - Windows: Download release and install
 - Linux:
   - Install libvulkan-dev (Ubuntu package name, other distributions's name may not same, make sure libvulkan.so.1 included)

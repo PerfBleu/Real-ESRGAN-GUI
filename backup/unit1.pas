@@ -14,10 +14,13 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    Bevel1: TBevel;
     BitBtn1: TBitBtn;
     BitBtn10: TBitBtn;
     BitBtn11: TBitBtn;
     BitBtn12: TBitBtn;
+    BitBtnAbout: TBitBtn;
+    BitBtnSettingCancel: TBitBtn;
     BitBtn4: TBitBtn;
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
@@ -30,8 +33,8 @@ type
     BitBtn2: TBitBtn;
     BitBtn3: TBitBtn;
     BitBtnStart: TBitBtn;
-    Button1: TButton;
     Button2: TButton;
+    ButtonEditCancel: TButton;
     ComboBox1: TComboBox;
     ComboBoxEditModel: TComboBox;
     ComboBoxPicModelSelector: TComboBox;
@@ -48,6 +51,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    LabelStatus: TLabel;
     LabelPicScale: TLabel;
     LabelSelectPicModel: TLabel;
     ListBoxPicSelect: TListBox;
@@ -56,6 +60,7 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    Panel4: TPanel;
     ProgressBar1: TProgressBar;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
@@ -64,6 +69,7 @@ type
     procedure BitBtn10Click(Sender: TObject);
     procedure BitBtn11Click(Sender: TObject);
     procedure BitBtn12Click(Sender: TObject);
+    procedure BitBtnAboutClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
@@ -75,10 +81,12 @@ type
     procedure BitBtn9Click(Sender: TObject);
     procedure BitBtnAddPicClick(Sender: TObject);
     procedure BitBtnSelectPicSourceClick(Sender: TObject);
+    procedure BitBtnSettingCancelClick(Sender: TObject);
     procedure BitBtnStartClick(Sender: TObject);
     procedure BitBtnTargetPathClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure ButtonEditCancelClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
       Selected: Boolean);
@@ -120,7 +128,7 @@ begin
   form1.bitbtn5.Enabled:=False;
   form1.bitbtn6.Enabled:=False;
   form1.bitbtn7.Enabled:=False;
-  form1.button1.Enabled:=False;
+  form1.BitBtnAbout.Enabled:=False;
   form1.bitbtn8.Enabled:=False;
   form1.listview1.Enabled:=False;
   form1.BitBtn11.Enabled:=False;
@@ -135,7 +143,7 @@ begin
   form1.bitbtn5.Enabled:=True;
   form1.bitbtn6.Enabled:=True;
   form1.bitbtn7.Enabled:=True;
-  form1.button1.Enabled:=True;
+  form1.BitBtnAbout.Enabled:=True;
   form1.bitbtn8.Enabled:=True;
   form1.listview1.Enabled:=True;
   form1.BitBtn11.Enabled:=True;
@@ -151,7 +159,7 @@ begin
   form1.bitbtn5.Enabled:=False;
   form1.bitbtn6.Enabled:=False;
   form1.bitbtn7.Enabled:=False;
-  form1.button1.Enabled:=False;
+  form1.BitBtnAbout.Enabled:=False;
   //form1.bitbtn8.Enabled:=False;
   //form1.listview1.Enabled:=False;
   form1.BitBtn10.Visible:=True;
@@ -168,7 +176,7 @@ begin
   form1.bitbtn5.Enabled:=True;
   form1.bitbtn6.Enabled:=True;
   form1.bitbtn7.Enabled:=True;
-  form1.button1.Enabled:=True;
+  form1.BitBtnAbout.Enabled:=True;
   //form1.bitbtn8.Enabled:=True;
   //form1.listview1.Enabled:=True;
   form1.BitBtn10.Visible:=False;
@@ -247,6 +255,14 @@ begin
   enable_all;
 end;
 
+procedure TForm1.BitBtnAboutClick(Sender: TObject);
+var
+  frm2:TForm;
+begin
+  frm2 :=  TForm2.Create(nil);
+  frm2.ShowModal;
+end;
+
 procedure TForm1.BitBtn2Click(Sender: TObject);
 begin
   ListView1.Items.Clear;
@@ -309,15 +325,23 @@ end;
 procedure TForm1.BitBtn8Click(Sender: TObject);
 begin
   if Bitbtn8.Caption = displaylog then
+    //begin
+    //  Form1.Height:=Form1.Height+255;
+    //  BitBtn8.Caption:=hidelog;
+    //  abort;
+    //end
     begin
-      Form1.Height:=Form1.Height+255;
       BitBtn8.Caption:=hidelog;
-      abort;
+      Panel4.Height:=147;
     end
   else
+    //begin
+    //  Form1.Height:=Form1.Height-255;
+    //  BitBtn8.Caption:=displaylog;
+    //end;
     begin
-      Form1.Height:=Form1.Height-255;
       BitBtn8.Caption:=displaylog;
+      Panel4.Height:=0;
     end;
 end;
 
@@ -363,6 +387,12 @@ begin
   end;
 end;
 
+procedure TForm1.BitBtnSettingCancelClick(Sender: TObject);
+begin
+  Panel3.Visible:=False;
+  enable_all;
+end;
+
 function getAttr(index:integer; _index:integer):string;
 begin
   Result:=Form1.ListView1.Items[index].SubItems.Strings[_index];
@@ -374,10 +404,12 @@ begin
   begin
     enable_start;
     stopflag:=False;
+    Form1.LabelStatus.Caption:='aborted';
     abort;
   end;
   if steps<totalsteps then
   begin
+    Form1.LabelStatus.Caption:=inttostr(steps+1)+' of '+inttostr(Form1.ProgressBar1.Max);
     Form1.ListView1.Items[steps].SubItems[4]:='PENDING';
     Form1.Memo1.Append(commandhead+' -i "'+getattr(steps,0)+'" -o "'+
     getattr(steps,1)+'" -n '+getattr(steps,2)+' -s '+getattr(steps,3));
@@ -389,6 +421,7 @@ begin
   begin
     Application.MessageBox(PChar('Total tasks '+inttostr(steps)+' Finished!'),
                            'Finish!', MB_ICONINFORMATION+MB_OK);
+    Form1.LabelStatus.Caption:='idle';
     enable_start;
   end;
 end;
@@ -421,12 +454,10 @@ begin
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
-var
-  frm2:TForm;
 begin
-  frm2 :=  TForm2.Create(nil);
-  frm2.ShowModal;
+
 end;
+
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -434,6 +465,12 @@ begin
   ListView1.Selected.SubItems[3]:=Edit2.Text;
   ListView1.Selected.SubItems[2]:=ComboBoxEditModel.Text;
   Panel2.Visible:=False;
+  enable_all;
+end;
+
+procedure TForm1.ButtonEditCancelClick(Sender: TObject);
+begin
+  panel2.Visible:=False;
   enable_all;
 end;
 
@@ -482,7 +519,7 @@ begin
     finally
       BinFiles.Free;
     end;
-
+  Panel4.Height:=0;
   proc:= TConsoleProc.Create(nil);
   proc.OnInitScreen :=@procInitScreen;
   proc.OnRefreshLine:=@procRefreshLine;
@@ -517,7 +554,7 @@ begin
       BitBtn2.Caption:=IniFile.ReadString('langstring', 'clearall', 'clearall');
       BitBtn5.Caption:=IniFile.ReadString('langstring', 'clearfinished', 'clearfinished');
       BitBtn6.Caption:=IniFile.ReadString('langstring', 'clearselected', 'clearselected');
-      Button1.Caption:=IniFile.ReadString('langstring', 'about', 'about');
+      BitBtnAbout.Caption:=IniFile.ReadString('langstring', 'about', 'about');
       BitBtn8.Caption:=IniFile.ReadString('langstring', 'displaylog', 'displaylog');
       displaylog := IniFile.ReadString('langstring', 'displaylog', 'displaylog');
       hidelog := IniFile.ReadString('langstring', 'hidelog', 'hidelog');
@@ -531,7 +568,7 @@ begin
       GroupBox2.Caption:=IniFile.ReadString('langstring', 'setparameters', 'setparameters');
       LabelSelectPicModel.Caption:=IniFile.ReadString('langstring', 'model', 'model');
       LabelPicScale.Caption:=IniFile.ReadString('langstring', 'scale', 'scale');
-      Label2.Caption:=IniFile.ReadString('langstring', 'filename', 'filename');
+      Label3.Caption:=IniFile.ReadString('langstring', 'filename', 'filename');
       RadioButton1.Caption:=IniFile.ReadString('langstring', 'prefix', 'prefix');
       RadioButton2.Caption:=IniFile.ReadString('langstring', 'suffix', 'suffix');
     finally
