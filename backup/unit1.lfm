@@ -6,11 +6,28 @@ object Form1: TForm1
   Caption = 'Real-ESRGAN/GUI'
   ClientHeight = 670
   ClientWidth = 1003
+  Color = clWindow
   Constraints.MinHeight = 300
   Constraints.MinWidth = 1003
   DesignTimePPI = 144
+  OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
+  object Bevel1: TBevel
+    AnchorSideTop.Control = ListView1
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 647
+    Height = 44
+    Top = 616
+    Width = 70
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Right = 286
+    BorderSpacing.Bottom = 10
+    Shape = bsFrame
+  end
   object ListView1: TListView
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -18,7 +35,7 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Panel4
     Left = 10
-    Height = 403
+    Height = 404
     Top = 58
     Width = 983
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -151,7 +168,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtnStartClick
-    TabOrder = 1
+    TabOrder = 6
   end
   object BitBtnAddPic: TBitBtn
     AnchorSideTop.Control = Owner
@@ -238,7 +255,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtnAddPicClick
-    TabOrder = 2
+    TabOrder = 1
   end
   object BitBtn2: TBitBtn
     AnchorSideTop.Control = Owner
@@ -413,11 +430,11 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn3Click
-    TabOrder = 4
+    TabOrder = 2
   end
   object BitBtn5: TBitBtn
     AnchorSideTop.Control = Owner
-    Left = 527
+    Left = 528
     Height = 46
     Top = 5
     Width = 174
@@ -500,11 +517,11 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn5Click
-    TabOrder = 6
+    TabOrder = 4
   end
   object BitBtn6: TBitBtn
     AnchorSideTop.Control = Owner
-    Left = 700
+    Left = 702
     Height = 46
     Top = 5
     Width = 174
@@ -587,7 +604,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn6Click
-    TabOrder = 7
+    TabOrder = 5
   end
   object BitBtn7: TBitBtn
     AnchorSideRight.Control = Owner
@@ -679,7 +696,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn7Click
-    TabOrder = 8
+    TabOrder = 7
   end
   object ProgressBar1: TProgressBar
     AnchorSideLeft.Control = BitBtn11
@@ -689,12 +706,12 @@ object Form1: TForm1
     Left = 293
     Height = 44
     Top = 616
-    Width = 350
+    Width = 349
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 134
     BorderSpacing.Right = 5
     BorderSpacing.Bottom = 10
-    TabOrder = 9
+    TabOrder = 8
   end
   object BitBtn8: TBitBtn
     AnchorSideLeft.Control = Owner
@@ -785,130 +802,33 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn8Click
-    TabOrder = 10
+    TabOrder = 9
   end
-  object Panel2: TPanel
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Owner
-    AnchorSideTop.Side = asrCenter
-    Left = 290
-    Height = 422
-    Top = 124
-    Width = 422
-    ClientHeight = 422
-    ClientWidth = 422
-    TabOrder = 11
-    Visible = False
-    object Edit1: TEdit
-      Left = 38
-      Height = 32
-      Top = 77
-      Width = 278
-      TabOrder = 0
-    end
-    object Label1: TLabel
-      Left = 38
-      Height = 24
-      Top = 48
-      Width = 56
-      Caption = 'Target'
-      ParentColor = False
-    end
-    object Label2: TLabel
-      Left = 38
-      Height = 24
-      Top = 134
-      Width = 44
-      Caption = 'Scale'
-      ParentColor = False
-    end
-    object Edit2: TEdit
-      Left = 38
-      Height = 32
-      Top = 163
-      Width = 346
-      NumbersOnly = True
-      TabOrder = 1
-    end
-    object Label4: TLabel
-      Left = 38
-      Height = 24
-      Top = 221
-      Width = 56
-      Caption = 'Model'
-      ParentColor = False
-    end
-    object Button2: TButton
-      Left = 144
-      Height = 37
-      Top = 360
-      Width = 113
-      Caption = 'Apply'
-      OnClick = Button2Click
-      TabOrder = 2
-    end
-    object BitBtn9: TBitBtn
-      Left = 326
-      Height = 38
-      Top = 77
-      Width = 58
-      Glyph.Data = {
-        36040000424D3604000000000000360000002800000010000000100000000100
-        2000000000000004000064000000640000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000000000000000000000000000000000003387EDFF3387
-        EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
-        EDFF3387EDFF3387EDFF3387EDFF3385EB3200000000000000003387EDFF4B9D
-        F0FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-        F8FF8FDBF8FF8FDBF8FF62B2F2FF3386EC9600000000000000003387EDFF4591
-        EEFF83D0F7FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-        F8FF8FDBF8FF8FDBF8FF85D2F7FF3489EDF0337FE50A000000003387EDFF89B9
-        F3FF61B1F3FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-        F8FF8FDBF8FF8FDBF8FF8FDBF8FF4E9FF0FF3386EC5F000000003387EDFFD3E3
-        F7FF3F91EEFF8EDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-        F8FF8FDBF8FF8FDBF8FF8FDBF8FF73C1F4FF3387EDC4000000003387EDFFFAFA
-        FAFF549AEFFF78C6F5FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-        F8FF8FDBF8FF8FDBF8FF8FDBF8FF8EDAF8FF3B8FEEFF3386EC283387EDFFFAFA
-        FAFF9EC5F4FF56A6F1FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-        F8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF5FAFF3FF3388ED8D3387EDFFFAFA
-        FAFFE8F0F8FF4390EEFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
-        EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDD73387EDFFFAFA
-        FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
-        FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
-        FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
-        FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
-        FAFFFAFAFAFFFAFAFAFFFAFAFAFFBDD7F5D04291EED03387EDFF3387EDFF3387
-        EDFF3387EDFF3387EDFF3387EEBF0000000000000000000000003387EDFFFAFA
-        FAFFFAFAFAFFBDD7F5D04291EED03387EDDF3388EC6D2E8BE80B000000000000
-        00000000000000000000000000000000000000000000000000003387EEBF3387
-        EDFF3387EDFF3387EDD43287ED57407FFF040000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000
-      }
-      OnClick = BitBtn9Click
-      TabOrder = 3
-    end
-    object ComboBoxEditModel: TComboBox
-      Left = 40
-      Height = 32
-      Top = 256
-      Width = 340
-      ItemHeight = 24
-      TabOrder = 4
-    end
-    object ButtonEditCancel: TButton
-      Left = 272
-      Height = 38
-      Top = 360
-      Width = 113
-      Caption = 'Cancel'
-      OnClick = ButtonEditCancelClick
-      TabOrder = 5
-    end
+  object LabelStatus: TLabel
+    AnchorSideLeft.Control = Bevel1
+    AnchorSideTop.Control = Bevel1
+    AnchorSideRight.Control = Bevel1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Bevel1
+    AnchorSideBottom.Side = asrBottom
+    Left = 647
+    Height = 24
+    Top = 626
+    Width = 70
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = False
+    BorderSpacing.Top = 10
+    BorderSpacing.Bottom = 10
+    Caption = 'idle'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
   end
   object BitBtn10: TBitBtn
     AnchorSideRight.Control = BitBtn7
@@ -1000,7 +920,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn10Click
-    TabOrder = 12
+    TabOrder = 11
     Visible = False
   end
   object BitBtn11: TBitBtn
@@ -1010,7 +930,7 @@ object Form1: TForm1
     Left = 159
     Height = 46
     Top = 614
-    Width = 129
+    Width = 130
     Anchors = [akLeft, akBottom]
     BorderSpacing.Left = 151
     BorderSpacing.Bottom = 10
@@ -1092,56 +1012,16 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtn11Click
-    TabOrder = 13
-  end
-  object Bevel1: TBevel
-    AnchorSideTop.Control = ListView1
-    AnchorSideRight.Control = BitBtnStart
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
-    Left = 648
-    Height = 42
-    Top = 618
-    Width = 69
-    Anchors = [akRight, akBottom]
-    BorderSpacing.Right = 137
-    BorderSpacing.Bottom = 10
-  end
-  object LabelStatus: TLabel
-    AnchorSideLeft.Control = Bevel1
-    AnchorSideTop.Control = Bevel1
-    AnchorSideRight.Control = Bevel1
-    AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Bevel1
-    AnchorSideBottom.Side = asrBottom
-    Left = 648
-    Height = 24
-    Top = 627
-    Width = 69
-    Alignment = taCenter
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    AutoSize = False
-    BorderSpacing.Top = 9
-    BorderSpacing.Bottom = 9
-    Caption = 'idle'
-    Font.CharSet = ANSI_CHARSET
-    Font.Height = -16
-    Font.Name = 'MS Sans Serif'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-    WordWrap = True
+    TabOrder = 10
   end
   object BitBtnAbout: TBitBtn
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 873
+    Left = 875
     Height = 46
     Top = 5
-    Width = 120
+    Width = 118
     Anchors = [akTop, akRight]
     BorderSpacing.Top = 5
     BorderSpacing.Right = 10
@@ -1223,7 +1103,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000
     }
     OnClick = BitBtnAboutClick
-    TabOrder = 15
+    TabOrder = 12
   end
   object Panel4: TPanel
     AnchorSideLeft.Control = Owner
@@ -1232,8 +1112,8 @@ object Form1: TForm1
     AnchorSideBottom.Control = ProgressBar1
     AnchorSideBottom.Side = asrBottom
     Left = 8
-    Height = 147
-    Top = 466
+    Height = 146
+    Top = 467
     Width = 985
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -1241,7 +1121,7 @@ object Form1: TForm1
     BorderSpacing.Bottom = 47
     BevelOuter = bvNone
     Caption = 'Panel4'
-    ClientHeight = 147
+    ClientHeight = 146
     ClientWidth = 985
     TabOrder = 16
     object GroupBox3: TGroupBox
@@ -1252,12 +1132,12 @@ object Form1: TForm1
       AnchorSideBottom.Control = Panel4
       AnchorSideBottom.Side = asrBottom
       Left = 0
-      Height = 147
+      Height = 146
       Top = 0
       Width = 985
       Anchors = [akTop, akLeft, akRight, akBottom]
       Caption = 'log'
-      ClientHeight = 118
+      ClientHeight = 117
       ClientWidth = 981
       TabOrder = 0
       object Memo1: TMemo
@@ -1267,14 +1147,14 @@ object Form1: TForm1
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = GroupBox3
         AnchorSideBottom.Side = asrBottom
-        Left = 3
-        Height = 111
+        Left = 2
+        Height = 110
         Top = 2
-        Width = 975
+        Width = 977
         Anchors = [akTop, akLeft, akRight, akBottom]
-        BorderSpacing.Left = 3
+        BorderSpacing.Left = 2
         BorderSpacing.Top = 2
-        BorderSpacing.Right = 3
+        BorderSpacing.Right = 2
         BorderSpacing.Bottom = 5
         ScrollBars = ssBoth
         TabOrder = 0
@@ -1291,10 +1171,10 @@ object Form1: TForm1
     Height = 528
     Top = 71
     Width = 667
-    Align = alCustom
-    ClientHeight = 528
-    ClientWidth = 667
-    TabOrder = 5
+    BorderStyle = bsSingle
+    ClientHeight = 524
+    ClientWidth = 663
+    TabOrder = 13
     Visible = False
     object GroupBox1: TGroupBox
       Left = 19
@@ -1317,7 +1197,7 @@ object Form1: TForm1
         Left = 10
         Height = 32
         Top = 250
-        Width = 309
+        Width = 310
         TabOrder = 1
       end
       object BitBtnTargetPath: TBitBtn
@@ -1748,14 +1628,16 @@ object Form1: TForm1
     Height = 392
     Top = 139
     Width = 629
-    ClientHeight = 392
-    ClientWidth = 629
-    TabOrder = 14
+    BorderStyle = bsSingle
+    ClientHeight = 388
+    ClientWidth = 625
+    TabOrder = 15
     Visible = False
+    OnClick = Panel3Click
     object GroupBox4: TGroupBox
       Left = 29
       Height = 253
-      Top = 29
+      Top = 32
       Width = 576
       Caption = 'Settings'
       ClientHeight = 224
@@ -1873,7 +1755,7 @@ object Form1: TForm1
       Height = 80
       Top = 296
       Width = 307
-      Caption = '部分设置需重启程序才能生效'#13#10'Some settings need to restart the program to take effect'
+      Caption = '部分设置需重启程序才能生效'#13#10'Some settings need to restart'#13#10'the program to take effect'
       TabOrder = 2
     end
     object BitBtnSettingCancel: TBitBtn
@@ -1960,6 +1842,130 @@ object Form1: TForm1
       }
       OnClick = BitBtnSettingCancelClick
       TabOrder = 3
+    end
+  end
+  object Panel2: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 290
+    Height = 422
+    Top = 124
+    Width = 422
+    BorderStyle = bsSingle
+    ClientHeight = 418
+    ClientWidth = 418
+    TabOrder = 14
+    Visible = False
+    object Edit1: TEdit
+      Left = 38
+      Height = 32
+      Top = 77
+      Width = 278
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 38
+      Height = 24
+      Top = 48
+      Width = 56
+      Caption = 'Target'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 38
+      Height = 24
+      Top = 134
+      Width = 44
+      Caption = 'Scale'
+      ParentColor = False
+    end
+    object Edit2: TEdit
+      Left = 38
+      Height = 32
+      Top = 163
+      Width = 346
+      NumbersOnly = True
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Left = 38
+      Height = 24
+      Top = 221
+      Width = 56
+      Caption = 'Model'
+      ParentColor = False
+    end
+    object Button2: TButton
+      Left = 144
+      Height = 37
+      Top = 361
+      Width = 113
+      Caption = 'Apply'
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+    object BitBtn9: TBitBtn
+      Left = 326
+      Height = 34
+      Top = 77
+      Width = 58
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000000000003387EDFF3387
+        EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
+        EDFF3387EDFF3387EDFF3387EDFF3385EB3200000000000000003387EDFF4B9D
+        F0FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+        F8FF8FDBF8FF8FDBF8FF62B2F2FF3386EC9600000000000000003387EDFF4591
+        EEFF83D0F7FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+        F8FF8FDBF8FF8FDBF8FF85D2F7FF3489EDF0337FE50A000000003387EDFF89B9
+        F3FF61B1F3FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+        F8FF8FDBF8FF8FDBF8FF8FDBF8FF4E9FF0FF3386EC5F000000003387EDFFD3E3
+        F7FF3F91EEFF8EDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+        F8FF8FDBF8FF8FDBF8FF8FDBF8FF73C1F4FF3387EDC4000000003387EDFFFAFA
+        FAFF549AEFFF78C6F5FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+        F8FF8FDBF8FF8FDBF8FF8FDBF8FF8EDAF8FF3B8FEEFF3386EC283387EDFFFAFA
+        FAFF9EC5F4FF56A6F1FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+        F8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF5FAFF3FF3388ED8D3387EDFFFAFA
+        FAFFE8F0F8FF4390EEFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
+        EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDD73387EDFFFAFA
+        FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
+        FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
+        FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
+        FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
+        FAFFFAFAFAFFFAFAFAFFFAFAFAFFBDD7F5D04291EED03387EDFF3387EDFF3387
+        EDFF3387EDFF3387EDFF3387EEBF0000000000000000000000003387EDFFFAFA
+        FAFFFAFAFAFFBDD7F5D04291EED03387EDDF3388EC6D2E8BE80B000000000000
+        00000000000000000000000000000000000000000000000000003387EEBF3387
+        EDFF3387EDFF3387EDD43287ED57407FFF040000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      OnClick = BitBtn9Click
+      TabOrder = 3
+    end
+    object ComboBoxEditModel: TComboBox
+      Left = 40
+      Height = 32
+      Top = 256
+      Width = 340
+      ItemHeight = 24
+      TabOrder = 4
+    end
+    object ButtonEditCancel: TButton
+      Left = 272
+      Height = 38
+      Top = 360
+      Width = 113
+      Caption = 'Cancel'
+      OnClick = ButtonEditCancelClick
+      TabOrder = 5
     end
   end
 end

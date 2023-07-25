@@ -84,13 +84,14 @@ type
     procedure BitBtnSettingCancelClick(Sender: TObject);
     procedure BitBtnStartClick(Sender: TObject);
     procedure BitBtnTargetPathClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure ButtonEditCancelClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure ListView1SelectItem(Sender: TObject; Item: TListItem;
       Selected: Boolean);
     procedure FormDestroy(Sender: TObject);
+    procedure Panel3Click(Sender: TObject);
     procedure procAddLine(HeightScr: integer);
     procedure procChangeState(State: string; pFinal: TPoint);
     procedure procInitScreen(const grilla: TtsGrid; fIni, fFin: integer);
@@ -358,7 +359,7 @@ begin
     OpenDialog.Options:=[ofPathMustExist];
     if OpenDialog.Execute then // 显示文件保存对话框
     begin
-      Edit1.Text:=OpenDialog.Files.Text+syssep+filename;
+      Edit1.Text:=StringReplace(OpenDialog.Files.Text+syssep+filename, #13+#10, '', [rfReplaceAll]);
     end;
   finally
     OpenDialog.Free;
@@ -453,11 +454,6 @@ begin
   end;
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
-begin
-
-end;
-
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -465,13 +461,18 @@ begin
   ListView1.Selected.SubItems[3]:=Edit2.Text;
   ListView1.Selected.SubItems[2]:=ComboBoxEditModel.Text;
   Panel2.Visible:=False;
-  enable_all;
+  if steps = totalsteps then enable_all;
 end;
 
 procedure TForm1.ButtonEditCancelClick(Sender: TObject);
 begin
   panel2.Visible:=False;
-  enable_all;
+  if steps = totalsteps then enable_all;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  proc.Close;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -605,6 +606,11 @@ end;
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
   proc.Destroy;
+end;
+
+procedure TForm1.Panel3Click(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.procChangeState(State: string; pFinal: TPoint);
