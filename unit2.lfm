@@ -7,7 +7,7 @@ object Form2: TForm2
   Caption = 'About'
   ClientHeight = 598
   ClientWidth = 1056
-  Color = clWhite
+  Color = clWindow
   DesignTimePPI = 144
   Position = poScreenCenter
   object Memoabout: TMemo
@@ -17,18 +17,24 @@ object Form2: TForm2
     Width = 662
     BorderStyle = bsNone
     Lines.Strings = (
-      '作者：PerfBleu'
-      'https://github.com/PerfBleu'
-      '项目地址: '
-      '----本软件使用Lazarus构建----'
+      '作者/Author : PerfBleu <https://github.com/PerfBleu>'
+      '项目地址/Project URL : https://github.com/PerfBleu/Real-ESRGAN-GUI'
+      ''
+      '-本软件使用Lazarus构建-'
       'Lazarus & FPC Project : https://www.freepascal.org/'
-      '----本软件使用的开源项目----'
-      'UnTerminal 1.0 : https://github.com/t-edson/UnTerminal'
-      '----软件内图标来自于----'
-      'colibre : https://github.com/rizmut/libreoffice-style-colibre'
-      '----核心二进制文件----'
+      ''
+      '-本软件使用的开源项目-'
       'Real-ESRGAN : https://github.com/xinntao/Real-ESRGAN'
-      '----协议 License----'
+      'UnTerminal 1.0 : https://github.com/t-edson/UnTerminal'
+      'colibre : https://github.com/rizmut/libreoffice-style-colibre'
+      ''
+      '-软件内图标来自于-'
+      'colibre : https://github.com/rizmut/libreoffice-style-colibre'
+      ''
+      '-核心二进制文件-'
+      'Real-ESRGAN : https://github.com/xinntao/Real-ESRGAN'
+      ''
+      '-协议 License-'
       '本软件使用AGPLv3协议'
       ''
       'GNU AFFERO GENERAL PUBLIC LICENSE'
@@ -245,6 +251,7 @@ object Form2: TForm2
       ''
       'You should also get your employer (if you work as a programmer) or school, if any, to sign a "copyright disclaimer" for the program, if necessary. For more information on this, and how to apply and follow the GNU AGPL, see <https://www.gnu.org/licenses/>.'
     )
+    ReadOnly = True
     ScrollBars = ssAutoVertical
     TabOrder = 0
   end

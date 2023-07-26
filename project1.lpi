@@ -14,7 +14,7 @@
         <LongPathAware Value="True"/>
         <AnsiUTF8 Value="True"/>
         <TextName Value="Real-ESRGAN/GUI"/>
-        <TextDesc Value="Real-ESRGAN/GUI"/>
+        <TextDesc Value="Real-ESRGAN/GUI, a native GUI for Real-ESRGAN cli."/>
       </XPManifest>
       <Icon Value="0"/>
     </General>
@@ -25,7 +25,7 @@
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="project1"/>
+            <Filename Value="RealESR-GAN_GUI"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
