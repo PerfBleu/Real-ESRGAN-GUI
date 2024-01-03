@@ -66,6 +66,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="KControlsLaz"/>
+      </Item>
+      <Item>
         <PackageName Value="LCL"/>
       </Item>
     </RequiredPackages>
@@ -115,6 +118,8 @@
         <DebugInfoType Value="dsDwarf2Set"/>
       </Debugging>
       <Options>
+        <PassLinkerOptions Value="True"/>
+        <LinkerOptions Value="-R .\"/>
         <Win32>
           <GraphicApplication Value="True"/>
         </Win32>

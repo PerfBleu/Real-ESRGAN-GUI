@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1675028309"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -Os4 -l -vewnhibq -Fi/media/perfectblue/FC80805357555E3F/projects/Real-ESRGAN-GUI/lib/x86_64-linux -Fu/home/perfectblue/.lazarus/lib/units/x86_64-linux/win32 -Fu/home/perfectblue/.lazarus/lib/LCLBase/units/x86_64-linux -Fu/home/perfectblue/.lazarus/lib/freetypelaz/lib/x86_64-linux -Fu/usr/lib/lazarus/2.2.4/components/lazutils/lib/x86_64-linux -Fu/usr/lib/lazarus/2.2.4/packager/units/x86_64-linux -Fu/media/perfectblue/FC80805357555E3F/projects/Real-ESRGAN-GUI/ -FU/media/perfectblue/FC80805357555E3F/projects/Real-ESRGAN-GUI/lib/x86_64-linux/ -FE/media/perfectblue/FC80805357555E3F/projects/Real-ESRGAN-GUI/ -o/media/perfectblue/FC80805357555E3F/projects/Real-ESRGAN-GUI/RealESR-GAN_GUI -dLCL -dLCLwin32 project1.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
