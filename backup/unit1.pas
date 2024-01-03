@@ -40,6 +40,7 @@ type
     ButtonAdvApply: TButton;
     ButtonModCancel: TButton;
     ButtonAdvCancel: TButton;
+    CheckBoxDontdelvideotmp: TCheckBox;
     CheckBoxForceMultihread: TCheckBox;
     CheckBoxGpuid: TCheckBox;
     CheckBoxThread: TCheckBox;
@@ -70,6 +71,7 @@ type
     GroupBoxLog: TGroupBox;
     KGradientLabel2: TKGradientLabel;
     KGradientLabel3: TKGradientLabel;
+    LabelVideoDisk: TLabel;
     Labelworkfolder: TLabel;
     LabelFolderPrompt: TLabel;
     LabelFilenameFormat: TLabel;
@@ -105,6 +107,7 @@ type
     RadioButtonSuffix: TRadioButton;
     SpinEditPicScale: TSpinEdit;
     StaticTextSettingsPrompt: TStaticText;
+    StatusBar1: TStatusBar;
     TabSheet1: TTabSheet;
     TabSheetSingleFile: TTabSheet;
     TabSheetFolder: TTabSheet;
@@ -176,6 +179,7 @@ var
   sysprompt: string = 'cmd';
   ffmpeg: string = '';
   videostepcounter:integer = 0;
+  videoFFpending:bool = True;
 implementation
 
 {$R *.lfm}
@@ -243,6 +247,7 @@ begin
   form1.BitBtnStop.Visible := False;
   form1.BitBtnStart.Visible := True;
   form1.BitBtnStop.Enabled := True;
+  form1.BitBtnConfig.Enabled:=True;
 end;
 
 
@@ -358,6 +363,10 @@ begin
         LangFile.ReadString('langstring', 'tabvideo', 'tabvideo');
       Form1.ffmpeglabel.Caption:=
         LangFile.ReadString('langstring', 'ffmpeglabel', 'ffmpeglabel');
+      Form1.LabelVideoDisk.Caption:=
+        LangFile.ReadString('langstring', 'tonsfodisklabel', 'tonsfodisklabel');
+      Form1.CheckBoxDontdelvideotmp.Caption:=
+        LangFile.ReadString('langstring', 'dontdelvideotmp', 'dontdelvideotmp');
     finally
       LangFile.Free;
     end;
@@ -410,7 +419,7 @@ begin
                   begin
                     with ListViewMain.Items.Add do
                     begin
-                      Caption := 'Picture'; //添加第一项
+                      Caption := 'Picture';
                       SubItems.add(ListBoxPicSelect.Items[i]);
                       if RadioButtonPrefix.Checked then
                         SubItems.Add(
@@ -803,11 +812,14 @@ begin
     Form1.LabelStatus.Color := clRed;
     Form1.LabelStatus.Caption := 'aborted';
     Form1.ListViewMain.Items[steps-1].SubItems[4]:='ABORTED';
+    Form1.StatusBar1.Panels.Items[1].Text:='ABORTED';
+    Form1.StatusBar1.Panels.Items[0].Text:='IDLE';
     abort;
   end;
 
   if steps < totalsteps then
   begin
+    Form1.StatusBar1.Panels.Items[0].Text:='BUSY';
     if (not Form1.ListViewMain.Items[steps].SubItems[4].Contains('WAIT')) and (not Form1.ListViewMain.Items[steps].SubItems[4].Contains('PENDING')) then
     begin
       proc.Open(sysprompt,'');
@@ -823,8 +835,11 @@ begin
                 Form1.LabelStatus.Caption := IntToStr(steps + 1) + ' of ' + IntToStr(Form1.ProgressBar1.Max);
                 Form1.ListViewMain.Items[steps].SubItems[4] := 'PENDING';
                 command_tail := ' -i "' + getattr(steps, 0) + '" "' + getattr(steps, 6) + syssep +'%d.jpg"';
-                Form1.MemoLog.Append(ffmpeg + command_tail);
+                Form1.Memolog.Append(ffmpeg + command_tail);
+                Form1.StatusBar1.Panels.Items[1].Text:='EXEC:'+ffmpeg + command_tail;
                 steps += 1;
+                //videostepcounter := videostepcounter + 1;
+                //videoFFpending := True;
                 proc.Open(ffmpeg, command_tail);
               end;
           1 : begin
@@ -832,13 +847,16 @@ begin
                   getattr(steps, 6)+syssep+'enlarged' + '" -n ' + getattr(steps, 2) + ' -s ' + getattr(steps, 3)+' -f ' + getattr(steps, 5);
                 Form1.MemoLog.Append(commandhead + command_tail + extra_cmd_paras);
                 ForceDirectories(getattr(steps, 6)+syssep+'enlarged');
+                Form1.StatusBar1.Panels.Items[1].Text:='EXEC:'+commandhead + command_tail + extra_cmd_paras;
                 steps += 1;
+                //videostepcounter := videostepcounter + 1;
+                //videoFFpending := True;
                 proc.Open(commandhead, command_tail + extra_cmd_paras);
               end;
           2 : begin
-                command_tail := ' -f image2 -i "' +  getattr(steps, 6) + syssep + 'enlarged' + syssep + '%d.jpg" ' + getattr(steps, 1)
-                + syssep + Form1.EditFFmpegArgs.Text;
+                command_tail := ' -f image2 '+'-i "' +  getattr(steps, 6) + syssep + 'enlarged' + syssep + '%d.jpg" ' + Form1.EditFFmpegArgs.Text +' "'+ getattr(steps, 1)+'"';
                 Form1.MemoLog.Append(ffmpeg+command_tail);
+                //videoFFpending:=True;
                 steps += 1;
                 proc.Open(ffmpeg, command_tail);
               end;
@@ -853,6 +871,7 @@ begin
           getattr(steps, 1) + '" -n ' + getattr(steps, 2) + ' -s ' + getattr(steps, 3) +
           ' -f ' + getattr(steps, 5);
         Form1.MemoLog.Append(commandhead + command_tail + extra_cmd_paras);
+        Form1.StatusBar1.Panels.Items[1].Text:='EXEC:'+commandhead + command_tail + extra_cmd_paras;
         steps += 1;
         proc.Open(commandhead, command_tail + extra_cmd_paras);
       end;
@@ -865,6 +884,7 @@ begin
     steps := 1;
     totalsteps := 0;
     Form1.LabelStatus.Color := clNone;
+    Form1.StatusBar1.Panels.Items[0].Text:='IDLE';
     enable_start;
   end;
 end;
@@ -930,6 +950,8 @@ begin
     IniFile.WriteString('settings', 'gc', EditGpuid.Text);
     IniFile.WriteString('settings', 'lpsc', EditThread.Text);
     IniFile.WriteString('settings', 'ffmpegargs', EditFFmpegargs.Text);
+    if CheckBoxDontdelvideotmp.Checked then IniFile.WriteString('settings', 'checkBoxDontdelvideotmp', '1')
+    else IniFile.WriteString('settings', 'checkBoxDontdelvideotmp', '0');
   finally
     IniFile.Free;
   end;
@@ -1083,6 +1105,10 @@ begin
     form1.EditGpuid.Text:=IniFile.ReadString('settings', 'gc', 'auto');
     form1.EditThread.Text:=IniFile.ReadString('settings', 'lpsc', '1:2:2');
     form1.EditFFmpegargs.Text := IniFile.ReadString('settings', 'ffmpegargs', '');
+    if IniFile.ReadString('settings', 'checkBoxDontdelvideotmp', '0') = '0' then
+      Form1.CheckBoxDontdelvideotmp.Checked:=False
+    else
+      Form1.CheckBoxDontdelvideotmp.Checked:=True;
   finally
     IniFile.Free;
   end;
@@ -1201,22 +1227,22 @@ begin
     begin
       case videostepcounter of
         0 : begin
-              videostepcounter := videostepcounter + 1;
               steps-=1;
+              videostepcounter := 1;
               stepTasks;
               exit;
             end;
         1 : begin
-              videostepcounter := videostepcounter + 1;
               steps-=1;
+              videostepcounter := 2;
               stepTasks;
               exit;
             end;
-        //2 : videostepcounter := videostepcounter + 1;
         2 : begin
-              Form1.ListViewMain.Items[steps - 1].SubItems[4] := 'DONE';
-              DeleteDirectory(string(Form1.ListViewMain.Items[steps - 1].SubItems[6]), False);
-              videostepcounter := 0;
+                Form1.ListViewMain.Items[steps - 1].SubItems[4] := 'DONE';
+                if not Form1.CheckBoxDontdelvideotmp.Checked then
+                  DeleteDirectory(string(Form1.ListViewMain.Items[steps - 1].SubItems[6]), False);
+                videostepcounter := 0;
             end;
       end;
     end;
@@ -1225,11 +1251,6 @@ begin
     begin
       DeleteDirectory(string(Form1.ListViewMain.Items[steps - 1].SubItems[6]), False);
     end;
-    //if Form1.ListViewMain.Items[steps - 1].Caption='Video' then
-    //begin
-    //  DeleteDirectory(string(Form1.ListViewMain.Items[steps - 1].SubItems[6]), False);
-    //end;
-    //Form1.ListViewMain.Selected.;
     Form1.ProgressBar1.Position := steps;
     stepTasks;
   end;

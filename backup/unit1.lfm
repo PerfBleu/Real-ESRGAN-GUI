@@ -16,15 +16,14 @@ object Form1: TForm1
     AnchorSideTop.Control = ListViewMain
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 432
     Height = 27
-    Top = 455
+    Top = 433
     Width = 47
     Anchors = [akRight, akBottom]
     BorderSpacing.Right = 191
-    BorderSpacing.Bottom = 8
+    BorderSpacing.Bottom = 4
     Shape = bsFrame
   end
   object ListViewMain: TListView
@@ -34,7 +33,7 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = PanelLog
     Left = 7
-    Height = 312
+    Height = 290
     Top = 39
     Width = 656
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -88,15 +87,14 @@ object Form1: TForm1
   object BitBtnStart: TBitBtn
     AnchorSideRight.Control = BitBtnQuit
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 482
     Height = 31
-    Top = 452
+    Top = 431
     Width = 88
     Anchors = [akRight, akBottom]
     BorderSpacing.Right = 93
-    BorderSpacing.Bottom = 7
+    BorderSpacing.Bottom = 2
     Caption = 'Start'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
@@ -616,15 +614,14 @@ object Form1: TForm1
   object BitBtnQuit: TBitBtn
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 575
     Height = 31
-    Top = 452
+    Top = 431
     Width = 88
     Anchors = [akRight, akBottom]
     BorderSpacing.Right = 7
-    BorderSpacing.Bottom = 7
+    BorderSpacing.Bottom = 2
     Caption = 'Quit'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
@@ -708,29 +705,27 @@ object Form1: TForm1
   object ProgressBar1: TProgressBar
     AnchorSideLeft.Control = BitBtnConfig
     AnchorSideRight.Control = BevelStatus
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 195
     Height = 27
-    Top = 455
+    Top = 433
     Width = 234
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 89
     BorderSpacing.Right = 3
-    BorderSpacing.Bottom = 8
+    BorderSpacing.Bottom = 4
     TabOrder = 8
   end
   object BitBtnLog: TBitBtn
     AnchorSideLeft.Control = Owner
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 5
     Height = 31
-    Top = 452
+    Top = 431
     Width = 97
     Anchors = [akLeft, akBottom]
     BorderSpacing.Left = 5
-    BorderSpacing.Bottom = 7
+    BorderSpacing.Bottom = 2
     Caption = 'Show log'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
@@ -820,7 +815,7 @@ object Form1: TForm1
     AnchorSideBottom.Side = asrBottom
     Left = 432
     Height = 27
-    Top = 455
+    Top = 433
     Width = 47
     Alignment = taCenter
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -839,15 +834,14 @@ object Form1: TForm1
   object BitBtnStop: TBitBtn
     AnchorSideRight.Control = BitBtnQuit
     AnchorSideRight.Side = asrBottom
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 482
     Height = 31
-    Top = 452
+    Top = 431
     Width = 88
     Anchors = [akRight, akBottom]
     BorderSpacing.Right = 93
-    BorderSpacing.Bottom = 7
+    BorderSpacing.Bottom = 2
     Caption = 'Stop'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
@@ -931,15 +925,14 @@ object Form1: TForm1
   end
   object BitBtnConfig: TBitBtn
     AnchorSideLeft.Control = BitBtnLog
-    AnchorSideBottom.Control = Owner
-    AnchorSideBottom.Side = asrBottom
+    AnchorSideBottom.Control = StatusBar1
     Left = 106
     Height = 31
-    Top = 452
+    Top = 431
     Width = 87
     Anchors = [akLeft, akBottom]
     BorderSpacing.Left = 101
-    BorderSpacing.Bottom = 7
+    BorderSpacing.Bottom = 2
     Caption = 'Config'
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
@@ -1119,7 +1112,7 @@ object Form1: TForm1
     AnchorSideBottom.Side = asrBottom
     Left = 5
     Height = 97
-    Top = 354
+    Top = 332
     Width = 658
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 5
@@ -1164,6 +1157,10 @@ object Form1: TForm1
         BorderSpacing.Top = 1
         BorderSpacing.Right = 1
         BorderSpacing.Bottom = 3
+        DoubleBuffered = True
+        MaxLength = 10000
+        ParentDoubleBuffered = False
+        ReadOnly = True
         ScrollBars = ssBoth
         TabOrder = 0
         WordWrap = False
@@ -1487,321 +1484,6 @@ object Form1: TForm1
       Caption = 'Cancel'
       TabOrder = 5
       OnClick = ButtonModCancelClick
-    end
-  end
-  object PanelAdvanced: TPanel
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = Owner
-    AnchorSideTop.Side = asrCenter
-    Left = 83
-    Height = 461
-    Top = 15
-    Width = 504
-    BorderStyle = bsSingle
-    ClientHeight = 457
-    ClientWidth = 500
-    ParentBackground = False
-    ParentColor = False
-    TabOrder = 17
-    Visible = False
-    object ButtonAdvApply: TButton
-      AnchorSideRight.Control = ButtonAdvCancel
-      AnchorSideBottom.Control = PanelAdvanced
-      AnchorSideBottom.Side = asrBottom
-      Left = 339
-      Height = 27
-      Top = 420
-      Width = 75
-      Anchors = [akRight, akBottom]
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 9
-      Caption = 'Apply'
-      TabOrder = 0
-      OnClick = ButtonAdvApplyClick
-    end
-    object ButtonAdvCancel: TButton
-      AnchorSideRight.Control = PanelAdvanced
-      AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = PanelAdvanced
-      AnchorSideBottom.Side = asrBottom
-      Left = 417
-      Height = 27
-      Top = 420
-      Width = 75
-      Anchors = [akRight, akBottom]
-      BorderSpacing.Right = 7
-      BorderSpacing.Bottom = 9
-      Caption = 'Cancel'
-      TabOrder = 1
-      OnClick = ButtonAdvCancelClick
-    end
-    object GroupBoxAdv: TGroupBox
-      AnchorSideLeft.Control = PanelAdvanced
-      AnchorSideRight.Control = PanelAdvanced
-      AnchorSideRight.Side = asrBottom
-      Left = 8
-      Height = 227
-      Top = 157
-      Width = 484
-      Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 7
-      BorderSpacing.Right = 7
-      Caption = 'Advanced Settings'
-      ClientHeight = 205
-      ClientWidth = 480
-      Enabled = False
-      ParentBackground = False
-      TabOrder = 2
-      object CheckBoxTilesize: TCheckBox
-        Left = 17
-        Height = 21
-        Top = 3
-        Width = 79
-        Caption = 'tile-size(-t)'
-        TabOrder = 0
-      end
-      object Labeltile: TLabel
-        Left = 21
-        Height = 17
-        Top = 34
-        Width = 352
-        Caption = 'tile size (>=32/0=auto, default=0) can be 0,0,0 for multi-gpu'
-        ParentColor = False
-      end
-      object EditTileSize: TEdit
-        Left = 160
-        Height = 25
-        Top = 3
-        Width = 160
-        TabOrder = 1
-        Text = '0'
-      end
-      object CheckBoxGpuid: TCheckBox
-        Left = 17
-        Height = 21
-        Top = 65
-        Width = 78
-        Caption = 'gpu-id(-g)'
-        TabOrder = 2
-      end
-      object Labelgpu: TLabel
-        Left = 21
-        Height = 17
-        Top = 95
-        Width = 346
-        Caption = 'gpu device to use (default=auto) can be 0,1,2 for multi-gpu'
-        ParentColor = False
-      end
-      object EditGpuid: TEdit
-        Left = 160
-        Height = 25
-        Top = 65
-        Width = 160
-        TabOrder = 3
-        Text = 'auto'
-      end
-      object CheckBoxThread: TCheckBox
-        Left = 17
-        Height = 21
-        Top = 123
-        Width = 119
-        Caption = 'load:proc:save(-j)'
-        TabOrder = 4
-      end
-      object EditThread: TEdit
-        Left = 160
-        Height = 25
-        Top = 123
-        Width = 160
-        TabOrder = 5
-        Text = '1:2:2'
-      end
-      object Labelthread: TLabel
-        Left = 21
-        Height = 17
-        Top = 154
-        Width = 451
-        Caption = 'thread count for load/proc/save (default=1:2:2) can be 1:2,2,2:2 for multi-gpu'
-        ParentColor = False
-      end
-      object CheckBoxTTA: TCheckBox
-        Left = 16
-        Height = 21
-        Top = 183
-        Width = 137
-        Caption = 'enable tta mode (-x)'
-        TabOrder = 6
-      end
-      object CheckBoxVerbose: TCheckBox
-        Left = 187
-        Height = 21
-        Top = 183
-        Width = 130
-        Caption = 'verbose output (-v)'
-        TabOrder = 7
-      end
-    end
-    object CheckBoxAdv: TCheckBox
-      AnchorSideLeft.Control = PanelAdvanced
-      Left = 8
-      Height = 21
-      Top = 139
-      Width = 168
-      BorderSpacing.Left = 7
-      Caption = 'Enable Advanced Settings'
-      TabOrder = 3
-      OnChange = CheckBoxAdvChange
-    end
-    object GroupBoxSettings: TGroupBox
-      AnchorSideLeft.Control = PanelAdvanced
-      AnchorSideRight.Control = PanelAdvanced
-      AnchorSideRight.Side = asrBottom
-      Left = 8
-      Height = 111
-      Top = 25
-      Width = 484
-      Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 7
-      BorderSpacing.Right = 7
-      Caption = 'Application Settings'
-      ClientHeight = 89
-      ClientWidth = 480
-      ParentBackground = False
-      TabOrder = 4
-      object ComboBoxSelectLang: TComboBox
-        Left = 123
-        Height = 25
-        Top = 5
-        Width = 77
-        ItemHeight = 17
-        ItemIndex = 0
-        Items.Strings = (
-          'en'
-        )
-        ReadOnly = True
-        TabOrder = 0
-        Text = 'en'
-      end
-      object LabelLang: TLabel
-        Left = 16
-        Height = 17
-        Top = 15
-        Width = 54
-        Caption = 'language'
-        ParentColor = False
-      end
-      object Labellangprompt: TLabel
-        Left = 237
-        Height = 70
-        Top = 0
-        Width = 235
-        AutoSize = False
-        Caption = '- You need to restart the application  if you set the language to "en".'
-        ParentColor = False
-        WordWrap = True
-      end
-      object EditWorkingFolder: TEdit
-        Left = 123
-        Height = 25
-        Top = 47
-        Width = 80
-        TabOrder = 1
-      end
-      object BitBtnModSelectTarget1: TBitBtn
-        Left = 208
-        Height = 23
-        Top = 49
-        Width = 23
-        Glyph.Data = {
-          36040000424D3604000000000000360000002800000010000000100000000100
-          2000000000000004000064000000640000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          00000000000000000000000000000000000000000000000000003387EDFF3387
-          EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
-          EDFF3387EDFF3387EDFF3387EDFF3385EB3200000000000000003387EDFF4B9D
-          F0FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-          F8FF8FDBF8FF8FDBF8FF62B2F2FF3386EC9600000000000000003387EDFF4591
-          EEFF83D0F7FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-          F8FF8FDBF8FF8FDBF8FF85D2F7FF3489EDF0337FE50A000000003387EDFF89B9
-          F3FF61B1F3FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-          F8FF8FDBF8FF8FDBF8FF8FDBF8FF4E9FF0FF3386EC5F000000003387EDFFD3E3
-          F7FF3F91EEFF8EDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-          F8FF8FDBF8FF8FDBF8FF8FDBF8FF73C1F4FF3387EDC4000000003387EDFFFAFA
-          FAFF549AEFFF78C6F5FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-          F8FF8FDBF8FF8FDBF8FF8FDBF8FF8EDAF8FF3B8FEEFF3386EC283387EDFFFAFA
-          FAFF9EC5F4FF56A6F1FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
-          F8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF5FAFF3FF3388ED8D3387EDFFFAFA
-          FAFFE8F0F8FF4390EEFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
-          EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDD73387EDFFFAFA
-          FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
-          FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
-          FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
-          FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
-          FAFFFAFAFAFFFAFAFAFFFAFAFAFFBDD7F5D04291EED03387EDFF3387EDFF3387
-          EDFF3387EDFF3387EDFF3387EEBF0000000000000000000000003387EDFFFAFA
-          FAFFFAFAFAFFBDD7F5D04291EED03387EDDF3388EC6D2E8BE80B000000000000
-          00000000000000000000000000000000000000000000000000003387EEBF3387
-          EDFF3387EDFF3387EDD43287ED57407FFF040000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000
-        }
-        OnClick = BitBtnModSelectTarget1Click
-        TabOrder = 2
-      end
-      object Labelworkfolder: TLabel
-        Left = 16
-        Height = 17
-        Top = 56
-        Width = 91
-        Caption = 'Working Folder'
-        ParentColor = False
-      end
-      object Labelworkfolderprompt: TLabel
-        Left = 240
-        Height = 64
-        Top = 45
-        Width = 245
-        AutoSize = False
-        Caption = '- Batch and video tasks will place temp files here, after process, they''ll be delete.'
-        ParentColor = False
-        WordWrap = True
-      end
-    end
-    object KGradientLabel3: TKGradientLabel
-      AnchorSideLeft.Control = PanelAdvanced
-      AnchorSideTop.Control = PanelAdvanced
-      AnchorSideRight.Control = PanelAdvanced
-      AnchorSideRight.Side = asrBottom
-      Left = 1
-      Height = 18
-      Top = 1
-      Width = 498
-      Anchors = [akTop, akLeft, akRight]
-      Caption = 'SETTINGS'
-      CaptionWidth = 498
-      Font.Color = clWhite
-      Font.Height = 16
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      RightColor = clWhite
-    end
-    object ffmpeglabel: TLabel
-      Left = 24
-      Height = 17
-      Top = 392
-      Width = 109
-      Caption = 'extra FFmpeg args'
-    end
-    object EditFFmpegArgs: TEdit
-      Left = 167
-      Height = 25
-      Top = 389
-      Width = 311
-      TabOrder = 6
     end
   end
   object PanelAddTask: TPanel
@@ -2246,6 +1928,15 @@ object Form1: TForm1
             ParentBidiMode = False
             TabOrder = 1
           end
+          object LabelVideoDisk: TLabel
+            Left = 208
+            Height = 37
+            Top = 0
+            Width = 304
+            AutoSize = False
+            Caption = 'It may take tons of disk space! and please make sure target file doens''t exist.'
+            WordWrap = True
+          end
         end
       end
     end
@@ -2592,5 +2283,345 @@ object Form1: TForm1
       Font.Style = [fsBold]
       RightColor = clWhite
     end
+  end
+  object PanelAdvanced: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 83
+    Height = 461
+    Top = 15
+    Width = 504
+    BorderStyle = bsSingle
+    ClientHeight = 457
+    ClientWidth = 500
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 17
+    Visible = False
+    object ButtonAdvApply: TButton
+      AnchorSideRight.Control = ButtonAdvCancel
+      AnchorSideBottom.Control = PanelAdvanced
+      AnchorSideBottom.Side = asrBottom
+      Left = 339
+      Height = 27
+      Top = 420
+      Width = 75
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 3
+      BorderSpacing.Bottom = 9
+      Caption = 'Apply'
+      TabOrder = 0
+      OnClick = ButtonAdvApplyClick
+    end
+    object ButtonAdvCancel: TButton
+      AnchorSideRight.Control = PanelAdvanced
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PanelAdvanced
+      AnchorSideBottom.Side = asrBottom
+      Left = 417
+      Height = 27
+      Top = 420
+      Width = 75
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 9
+      Caption = 'Cancel'
+      TabOrder = 1
+      OnClick = ButtonAdvCancelClick
+    end
+    object GroupBoxAdv: TGroupBox
+      AnchorSideLeft.Control = PanelAdvanced
+      AnchorSideRight.Control = PanelAdvanced
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 227
+      Top = 157
+      Width = 484
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 7
+      BorderSpacing.Right = 7
+      Caption = 'Real-ESRGAN Advanced Settings'
+      ClientHeight = 205
+      ClientWidth = 480
+      Enabled = False
+      ParentBackground = False
+      TabOrder = 2
+      object CheckBoxTilesize: TCheckBox
+        Left = 17
+        Height = 21
+        Top = 3
+        Width = 79
+        Caption = 'tile-size(-t)'
+        TabOrder = 0
+      end
+      object Labeltile: TLabel
+        Left = 21
+        Height = 17
+        Top = 34
+        Width = 352
+        Caption = 'tile size (>=32/0=auto, default=0) can be 0,0,0 for multi-gpu'
+        ParentColor = False
+      end
+      object EditTileSize: TEdit
+        Left = 160
+        Height = 25
+        Top = 3
+        Width = 160
+        TabOrder = 1
+        Text = '0'
+      end
+      object CheckBoxGpuid: TCheckBox
+        Left = 17
+        Height = 21
+        Top = 65
+        Width = 78
+        Caption = 'gpu-id(-g)'
+        TabOrder = 2
+      end
+      object Labelgpu: TLabel
+        Left = 21
+        Height = 17
+        Top = 95
+        Width = 346
+        Caption = 'gpu device to use (default=auto) can be 0,1,2 for multi-gpu'
+        ParentColor = False
+      end
+      object EditGpuid: TEdit
+        Left = 160
+        Height = 25
+        Top = 65
+        Width = 160
+        TabOrder = 3
+        Text = 'auto'
+      end
+      object CheckBoxThread: TCheckBox
+        Left = 17
+        Height = 21
+        Top = 123
+        Width = 119
+        Caption = 'load:proc:save(-j)'
+        TabOrder = 4
+      end
+      object EditThread: TEdit
+        Left = 160
+        Height = 25
+        Top = 123
+        Width = 160
+        TabOrder = 5
+        Text = '1:2:2'
+      end
+      object Labelthread: TLabel
+        Left = 21
+        Height = 17
+        Top = 154
+        Width = 451
+        Caption = 'thread count for load/proc/save (default=1:2:2) can be 1:2,2,2:2 for multi-gpu'
+        ParentColor = False
+      end
+      object CheckBoxTTA: TCheckBox
+        Left = 16
+        Height = 21
+        Top = 183
+        Width = 137
+        Caption = 'enable tta mode (-x)'
+        TabOrder = 6
+      end
+      object CheckBoxVerbose: TCheckBox
+        Left = 187
+        Height = 21
+        Top = 183
+        Width = 130
+        Caption = 'verbose output (-v)'
+        TabOrder = 7
+      end
+    end
+    object CheckBoxAdv: TCheckBox
+      AnchorSideLeft.Control = PanelAdvanced
+      Left = 8
+      Height = 21
+      Top = 139
+      Width = 251
+      BorderSpacing.Left = 7
+      Caption = 'Enable Real-ESRGAN Advanced Settings'
+      TabOrder = 3
+      OnChange = CheckBoxAdvChange
+    end
+    object GroupBoxSettings: TGroupBox
+      AnchorSideLeft.Control = PanelAdvanced
+      AnchorSideRight.Control = PanelAdvanced
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 111
+      Top = 25
+      Width = 484
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 7
+      BorderSpacing.Right = 7
+      Caption = 'Application Settings'
+      ClientHeight = 89
+      ClientWidth = 480
+      ParentBackground = False
+      TabOrder = 4
+      object ComboBoxSelectLang: TComboBox
+        Left = 123
+        Height = 25
+        Top = 5
+        Width = 77
+        ItemHeight = 17
+        ItemIndex = 0
+        Items.Strings = (
+          'en'
+        )
+        ReadOnly = True
+        TabOrder = 0
+        Text = 'en'
+      end
+      object LabelLang: TLabel
+        Left = 16
+        Height = 17
+        Top = 15
+        Width = 54
+        Caption = 'language'
+        ParentColor = False
+      end
+      object Labellangprompt: TLabel
+        Left = 237
+        Height = 70
+        Top = 0
+        Width = 235
+        AutoSize = False
+        Caption = '- You need to restart the application  if you set the language to "en".'
+        ParentColor = False
+        WordWrap = True
+      end
+      object EditWorkingFolder: TEdit
+        Left = 123
+        Height = 25
+        Top = 47
+        Width = 80
+        TabOrder = 1
+      end
+      object BitBtnModSelectTarget1: TBitBtn
+        Left = 208
+        Height = 23
+        Top = 49
+        Width = 23
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000003387EDFF3387
+          EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
+          EDFF3387EDFF3387EDFF3387EDFF3385EB3200000000000000003387EDFF4B9D
+          F0FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+          F8FF8FDBF8FF8FDBF8FF62B2F2FF3386EC9600000000000000003387EDFF4591
+          EEFF83D0F7FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+          F8FF8FDBF8FF8FDBF8FF85D2F7FF3489EDF0337FE50A000000003387EDFF89B9
+          F3FF61B1F3FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+          F8FF8FDBF8FF8FDBF8FF8FDBF8FF4E9FF0FF3386EC5F000000003387EDFFD3E3
+          F7FF3F91EEFF8EDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+          F8FF8FDBF8FF8FDBF8FF8FDBF8FF73C1F4FF3387EDC4000000003387EDFFFAFA
+          FAFF549AEFFF78C6F5FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+          F8FF8FDBF8FF8FDBF8FF8FDBF8FF8EDAF8FF3B8FEEFF3386EC283387EDFFFAFA
+          FAFF9EC5F4FF56A6F1FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDB
+          F8FF8FDBF8FF8FDBF8FF8FDBF8FF8FDBF8FF5FAFF3FF3388ED8D3387EDFFFAFA
+          FAFFE8F0F8FF4390EEFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387
+          EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDFF3387EDD73387EDFFFAFA
+          FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
+          FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
+          FAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
+          FAFFFAFAFAFFFAFAFAFF3387EDFF0000000000000000000000003387EDFFFAFA
+          FAFFFAFAFAFFFAFAFAFFFAFAFAFFBDD7F5D04291EED03387EDFF3387EDFF3387
+          EDFF3387EDFF3387EDFF3387EEBF0000000000000000000000003387EDFFFAFA
+          FAFFFAFAFAFFBDD7F5D04291EED03387EDDF3388EC6D2E8BE80B000000000000
+          00000000000000000000000000000000000000000000000000003387EEBF3387
+          EDFF3387EDFF3387EDD43287ED57407FFF040000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = BitBtnModSelectTarget1Click
+        TabOrder = 2
+      end
+      object Labelworkfolder: TLabel
+        Left = 16
+        Height = 17
+        Top = 56
+        Width = 91
+        Caption = 'Working Folder'
+        ParentColor = False
+      end
+      object Labelworkfolderprompt: TLabel
+        Left = 240
+        Height = 64
+        Top = 45
+        Width = 245
+        AutoSize = False
+        Caption = '- Batch and video tasks will place temp files here, after process, they''ll be delete.'
+        ParentColor = False
+        WordWrap = True
+      end
+    end
+    object KGradientLabel3: TKGradientLabel
+      AnchorSideLeft.Control = PanelAdvanced
+      AnchorSideTop.Control = PanelAdvanced
+      AnchorSideRight.Control = PanelAdvanced
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 18
+      Top = 1
+      Width = 498
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'SETTINGS'
+      CaptionWidth = 498
+      Font.Color = clWhite
+      Font.Height = 16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      RightColor = clWhite
+    end
+    object ffmpeglabel: TLabel
+      Left = 24
+      Height = 17
+      Top = 392
+      Width = 151
+      Caption = 'Extra FFmpeg output args'
+    end
+    object EditFFmpegArgs: TEdit
+      Left = 184
+      Height = 25
+      Top = 388
+      Width = 81
+      TabOrder = 6
+    end
+    object CheckBoxDontdelvideotmp: TCheckBox
+      Left = 272
+      Height = 21
+      Top = 392
+      Width = 223
+      Caption = 'Don''t delete video task''s temp files'
+      TabOrder = 7
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 26
+    Top = 464
+    Width = 670
+    Panels = <    
+      item
+        Text = 'IDLE'
+        Width = 50
+      end    
+      item
+        BidiMode = bdRightToLeftNoAlign
+        Text = 'WAITING'
+        Width = 50
+      end>
+    SimplePanel = False
   end
 end
